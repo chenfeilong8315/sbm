@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.importdata.mapper.VActionOptionMapper" >
+  <resultMap id="BaseResultMap" type="com.importdata.pojo.VActionOption" >
+    <id column="caoptn_id" property="caoptnId" jdbcType="VARCHAR" />
+    <result column="info_id" property="infoId" jdbcType="VARCHAR" />
+    <result column="caon" property="caon" jdbcType="VARCHAR" />
+    <result column="caop" property="caop" jdbcType="VARCHAR" />
+    <result column="disf" property="disf" jdbcType="VARCHAR" />
+    <result column="offe" property="offe" jdbcType="VARCHAR" />
+    <result column="optf" property="optf" jdbcType="VARCHAR" />
+    <result column="osta" property="osta" jdbcType="VARCHAR" />
+    <result column="f22_ceti" property="f22Ceti" jdbcType="VARCHAR" />
+    <result column="ndom" property="ndom" jdbcType="VARCHAR" />
+    <result column="domi" property="domi" jdbcType="VARCHAR" />
+    <result column="optn" property="optn" jdbcType="VARCHAR" />
+    <result column="dflt_stin" property="dfltStin" jdbcType="VARCHAR" />
+    <result column="rchg" property="rchg" jdbcType="VARCHAR" />
+    <result column="cert" property="cert" jdbcType="VARCHAR" />
+    <result column="wthd" property="wthd" jdbcType="VARCHAR" />
+    <result column="chan" property="chan" jdbcType="VARCHAR" />
+    <result column="apli" property="apli" jdbcType="VARCHAR" />
+    <result column="iden_sec" property="idenSec" jdbcType="VARCHAR" />
+    <result column="dvcp" property="dvcp" jdbcType="VARCHAR" />
+    <result column="eard" property="eard" jdbcType="VARCHAR" />
+    <result column="expi" property="expi" jdbcType="VARCHAR" />
+    <result column="mkdt" property="mkdt" jdbcType="VARCHAR" />
+    <result column="podt" property="podt" jdbcType="VARCHAR" />
+    <result column="subs" property="subs" jdbcType="VARCHAR" />
+    <result column="rddt" property="rddt" jdbcType="VARCHAR" />
+    <result column="cvpr" property="cvpr" jdbcType="VARCHAR" />
+    <result column="bord" property="bord" jdbcType="VARCHAR" />
+    <result column="pric" property="pric" jdbcType="VARCHAR" />
+    <result column="revo" property="revo" jdbcType="VARCHAR" />
+    <result column="pwal" property="pwal" jdbcType="VARCHAR" />
+    <result column="parl" property="parl" jdbcType="VARCHAR" />
+    <result column="susp" property="susp" jdbcType="VARCHAR" />
+    <result column="arev" property="arev" jdbcType="VARCHAR" />
+    <result column="dswo" property="dswo" jdbcType="VARCHAR" />
+    <result column="grss" property="grss" jdbcType="VARCHAR" />
+    <result column="taxr" property="taxr" jdbcType="VARCHAR" />
+    <result column="atax" property="atax" jdbcType="VARCHAR" />
+    <result column="indx" property="indx" jdbcType="VARCHAR" />
+    <result column="ovep" property="ovep" jdbcType="VARCHAR" />
+    <result column="pror" property="pror" jdbcType="VARCHAR" />
+    <result column="intp" property="intp" jdbcType="VARCHAR" />
+    <result column="tdmt" property="tdmt" jdbcType="VARCHAR" />
+    <result column="nett" property="nett" jdbcType="VARCHAR" />
+    <result column="idfx" property="idfx" jdbcType="VARCHAR" />
+    <result column="txin" property="txin" jdbcType="VARCHAR" />
+    <result column="witl" property="witl" jdbcType="VARCHAR" />
+    <result column="cinl" property="cinl" jdbcType="VARCHAR" />
+    <result column="osub" property="osub" jdbcType="VARCHAR" />
+    <result column="maex" property="maex" jdbcType="VARCHAR" />
+    <result column="miex" property="miex" jdbcType="VARCHAR" />
+    <result column="milt" property="milt" jdbcType="VARCHAR" />
+    <result column="nblt" property="nblt" jdbcType="VARCHAR" />
+    <result column="newd" property="newd" jdbcType="VARCHAR" />
+    <result column="bolq" property="bolq" jdbcType="VARCHAR" />
+    <result column="folq" property="folq" jdbcType="VARCHAR" />
+    <result column="adtx" property="adtx" jdbcType="VARCHAR" />
+    <result column="f70_ceti" property="f70Ceti" jdbcType="VARCHAR" />
+    <result column="comp" property="comp" jdbcType="VARCHAR" />
+    <result column="disc" property="disc" jdbcType="VARCHAR" />
+    <result column="inco" property="inco" jdbcType="VARCHAR" />
+    <result column="nser" property="nser" jdbcType="VARCHAR" />
+    <result column="taxe" property="taxe" jdbcType="VARCHAR" />
+    <result column="txnr" property="txnr" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    caoptn_id, info_id, caon, caop, disf, offe, optf, osta, f22_ceti, ndom, domi, optn, 
+    dflt_stin, rchg, cert, wthd, chan, apli, iden_sec, dvcp, eard, expi, mkdt, podt, 
+    subs, rddt, cvpr, bord, pric, revo, pwal, parl, susp, arev, dswo, grss, taxr, atax, 
+    indx, ovep, pror, intp, tdmt, nett, idfx, txin, witl, cinl, osub, maex, miex, milt, 
+    nblt, newd, bolq, folq, adtx, f70_ceti, comp, disc, inco, nser, taxe, txnr
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from v_action_option
+    where caoptn_id = #{caoptnId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from v_action_option
+    where caoptn_id = #{caoptnId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.importdata.pojo.VActionOption" >
+    insert into v_action_option (caoptn_id, info_id, caon, 
+      caop, disf, offe, optf, 
+      osta, f22_ceti, ndom, 
+      domi, optn, dflt_stin, 
+      rchg, cert, wthd, chan, 
+      apli, iden_sec, dvcp, 
+      eard, expi, mkdt, podt, 
+      subs, rddt, cvpr, bord, 
+      pric, revo, pwal, parl, 
+      susp, arev, dswo, grss, 
+      taxr, atax, indx, ovep, 
+      pror, intp, tdmt, nett, 
+      idfx, txin, witl, cinl, 
+      osub, maex, miex, milt, 
+      nblt, newd, bolq, folq, 
+      adtx, f70_ceti, comp, 
+      disc, inco, nser, taxe, 
+      txnr)
+    values (#{caoptnId,jdbcType=VARCHAR}, #{infoId,jdbcType=VARCHAR}, #{caon,jdbcType=VARCHAR}, 
+      #{caop,jdbcType=VARCHAR}, #{disf,jdbcType=VARCHAR}, #{offe,jdbcType=VARCHAR}, #{optf,jdbcType=VARCHAR}, 
+      #{osta,jdbcType=VARCHAR}, #{f22Ceti,jdbcType=VARCHAR}, #{ndom,jdbcType=VARCHAR}, 
+      #{domi,jdbcType=VARCHAR}, #{optn,jdbcType=VARCHAR}, #{dfltStin,jdbcType=VARCHAR}, 
+      #{rchg,jdbcType=VARCHAR}, #{cert,jdbcType=VARCHAR}, #{wthd,jdbcType=VARCHAR}, #{chan,jdbcType=VARCHAR}, 
+      #{apli,jdbcType=VARCHAR}, #{idenSec,jdbcType=VARCHAR}, #{dvcp,jdbcType=VARCHAR}, 
+      #{eard,jdbcType=VARCHAR}, #{expi,jdbcType=VARCHAR}, #{mkdt,jdbcType=VARCHAR}, #{podt,jdbcType=VARCHAR}, 
+      #{subs,jdbcType=VARCHAR}, #{rddt,jdbcType=VARCHAR}, #{cvpr,jdbcType=VARCHAR}, #{bord,jdbcType=VARCHAR}, 
+      #{pric,jdbcType=VARCHAR}, #{revo,jdbcType=VARCHAR}, #{pwal,jdbcType=VARCHAR}, #{parl,jdbcType=VARCHAR}, 
+      #{susp,jdbcType=VARCHAR}, #{arev,jdbcType=VARCHAR}, #{dswo,jdbcType=VARCHAR}, #{grss,jdbcType=VARCHAR}, 
+      #{taxr,jdbcType=VARCHAR}, #{atax,jdbcType=VARCHAR}, #{indx,jdbcType=VARCHAR}, #{ovep,jdbcType=VARCHAR}, 
+      #{pror,jdbcType=VARCHAR}, #{intp,jdbcType=VARCHAR}, #{tdmt,jdbcType=VARCHAR}, #{nett,jdbcType=VARCHAR}, 
+      #{idfx,jdbcType=VARCHAR}, #{txin,jdbcType=VARCHAR}, #{witl,jdbcType=VARCHAR}, #{cinl,jdbcType=VARCHAR}, 
+      #{osub,jdbcType=VARCHAR}, #{maex,jdbcType=VARCHAR}, #{miex,jdbcType=VARCHAR}, #{milt,jdbcType=VARCHAR}, 
+      #{nblt,jdbcType=VARCHAR}, #{newd,jdbcType=VARCHAR}, #{bolq,jdbcType=VARCHAR}, #{folq,jdbcType=VARCHAR}, 
+      #{adtx,jdbcType=VARCHAR}, #{f70Ceti,jdbcType=VARCHAR}, #{comp,jdbcType=VARCHAR}, 
+      #{disc,jdbcType=VARCHAR}, #{inco,jdbcType=VARCHAR}, #{nser,jdbcType=VARCHAR}, #{taxe,jdbcType=VARCHAR}, 
+      #{txnr,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.importdata.pojo.VActionOption" >
+    insert into v_action_option
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="caoptnId != null" >
+        caoptn_id,
+      </if>
+      <if test="infoId != null" >
+        info_id,
+      </if>
+      <if test="caon != null" >
+        caon,
+      </if>
+      <if test="caop != null" >
+        caop,
+      </if>
+      <if test="disf != null" >
+        disf,
+      </if>
+      <if test="offe != null" >
+        offe,
+      </if>
+      <if test="optf != null" >
+        optf,
+      </if>
+      <if test="osta != null" >
+        osta,
+      </if>
+      <if test="f22Ceti != null" >
+        f22_ceti,
+      </if>
+      <if test="ndom != null" >
+        ndom,
+      </if>
+      <if test="domi != null" >
+        domi,
+      </if>
+      <if test="optn != null" >
+        optn,
+      </if>
+      <if test="dfltStin != null" >
+        dflt_stin,
+      </if>
+      <if test="rchg != null" >
+        rchg,
+      </if>
+      <if test="cert != null" >
+        cert,
+      </if>
+      <if test="wthd != null" >
+        wthd,
+      </if>
+      <if test="chan != null" >
+        chan,
+      </if>
+      <if test="apli != null" >
+        apli,
+      </if>
+      <if test="idenSec != null" >
+        iden_sec,
+      </if>
+      <if test="dvcp != null" >
+        dvcp,
+      </if>
+      <if test="eard != null" >
+        eard,
+      </if>
+      <if test="expi != null" >
+        expi,
+      </if>
+      <if test="mkdt != null" >
+        mkdt,
+      </if>
+      <if test="podt != null" >
+        podt,
+      </if>
+      <if test="subs != null" >
+        subs,
+      </if>
+      <if test="rddt != null" >
+        rddt,
+      </if>
+      <if test="cvpr != null" >
+        cvpr,
+      </if>
+      <if test="bord != null" >
+        bord,
+      </if>
+      <if test="pric != null" >
+        pric,
+      </if>
+      <if test="revo != null" >
+        revo,
+      </if>
+      <if test="pwal != null" >
+        pwal,
+      </if>
+      <if test="parl != null" >
+        parl,
+      </if>
+      <if test="susp != null" >
+        susp,
+      </if>
+      <if test="arev != null" >
+        arev,
+      </if>
+      <if test="dswo != null" >
+        dswo,
+      </if>
+      <if test="grss != null" >
+        grss,
+      </if>
+      <if test="taxr != null" >
+        taxr,
+      </if>
+      <if test="atax != null" >
+        atax,
+      </if>
+      <if test="indx != null" >
+        indx,
+      </if>
+      <if test="ovep != null" >
+        ovep,
+      </if>
+      <if test="pror != null" >
+        pror,
+      </if>
+      <if test="intp != null" >
+        intp,
+      </if>
+      <if test="tdmt != null" >
+        tdmt,
+      </if>
+      <if test="nett != null" >
+        nett,
+      </if>
+      <if test="idfx != null" >
+        idfx,
+      </if>
+      <if test="txin != null" >
+        txin,
+      </if>
+      <if test="witl != null" >
+        witl,
+      </if>
+      <if test="cinl != null" >
+        cinl,
+      </if>
+      <if test="osub != null" >
+        osub,
+      </if>
+      <if test="maex != null" >
+        maex,
+      </if>
+      <if test="miex != null" >
+        miex,
+      </if>
+      <if test="milt != null" >
+        milt,
+      </if>
+      <if test="nblt != null" >
+        nblt,
+      </if>
+      <if test="newd != null" >
+        newd,
+      </if>
+      <if test="bolq != null" >
+        bolq,
+      </if>
+      <if test="folq != null" >
+        folq,
+      </if>
+      <if test="adtx != null" >
+        adtx,
+      </if>
+      <if test="f70Ceti != null" >
+        f70_ceti,
+      </if>
+      <if test="comp != null" >
+        comp,
+      </if>
+      <if test="disc != null" >
+        disc,
+      </if>
+      <if test="inco != null" >
+        inco,
+      </if>
+      <if test="nser != null" >
+        nser,
+      </if>
+      <if test="taxe != null" >
+        taxe,
+      </if>
+      <if test="txnr != null" >
+        txnr,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="caoptnId != null" >
+        #{caoptnId,jdbcType=VARCHAR},
+      </if>
+      <if test="infoId != null" >
+        #{infoId,jdbcType=VARCHAR},
+      </if>
+      <if test="caon != null" >
+        #{caon,jdbcType=VARCHAR},
+      </if>
+      <if test="caop != null" >
+        #{caop,jdbcType=VARCHAR},
+      </if>
+      <if test="disf != null" >
+        #{disf,jdbcType=VARCHAR},
+      </if>
+      <if test="offe != null" >
+        #{offe,jdbcType=VARCHAR},
+      </if>
+      <if test="optf != null" >
+        #{optf,jdbcType=VARCHAR},
+      </if>
+      <if test="osta != null" >
+        #{osta,jdbcType=VARCHAR},
+      </if>
+      <if test="f22Ceti != null" >
+        #{f22Ceti,jdbcType=VARCHAR},
+      </if>
+      <if test="ndom != null" >
+        #{ndom,jdbcType=VARCHAR},
+      </if>
+      <if test="domi != null" >
+        #{domi,jdbcType=VARCHAR},
+      </if>
+      <if test="optn != null" >
+        #{optn,jdbcType=VARCHAR},
+      </if>
+      <if test="dfltStin != null" >
+        #{dfltStin,jdbcType=VARCHAR},
+      </if>
+      <if test="rchg != null" >
+        #{rchg,jdbcType=VARCHAR},
+      </if>
+      <if test="cert != null" >
+        #{cert,jdbcType=VARCHAR},
+      </if>
+      <if test="wthd != null" >
+        #{wthd,jdbcType=VARCHAR},
+      </if>
+      <if test="chan != null" >
+        #{chan,jdbcType=VARCHAR},
+      </if>
+      <if test="apli != null" >
+        #{apli,jdbcType=VARCHAR},
+      </if>
+      <if test="idenSec != null" >
+        #{idenSec,jdbcType=VARCHAR},
+      </if>
+      <if test="dvcp != null" >
+        #{dvcp,jdbcType=VARCHAR},
+      </if>
+      <if test="eard != null" >
+        #{eard,jdbcType=VARCHAR},
+      </if>
+      <if test="expi != null" >
+        #{expi,jdbcType=VARCHAR},
+      </if>
+      <if test="mkdt != null" >
+        #{mkdt,jdbcType=VARCHAR},
+      </if>
+      <if test="podt != null" >
+        #{podt,jdbcType=VARCHAR},
+      </if>
+      <if test="subs != null" >
+        #{subs,jdbcType=VARCHAR},
+      </if>
+      <if test="rddt != null" >
+        #{rddt,jdbcType=VARCHAR},
+      </if>
+      <if test="cvpr != null" >
+        #{cvpr,jdbcType=VARCHAR},
+      </if>
+      <if test="bord != null" >
+        #{bord,jdbcType=VARCHAR},
+      </if>
+      <if test="pric != null" >
+        #{pric,jdbcType=VARCHAR},
+      </if>
+      <if test="revo != null" >
+        #{revo,jdbcType=VARCHAR},
+      </if>
+      <if test="pwal != null" >
+        #{pwal,jdbcType=VARCHAR},
+      </if>
+      <if test="parl != null" >
+        #{parl,jdbcType=VARCHAR},
+      </if>
+      <if test="susp != null" >
+        #{susp,jdbcType=VARCHAR},
+      </if>
+      <if test="arev != null" >
+        #{arev,jdbcType=VARCHAR},
+      </if>
+      <if test="dswo != null" >
+        #{dswo,jdbcType=VARCHAR},
+      </if>
+      <if test="grss != null" >
+        #{grss,jdbcType=VARCHAR},
+      </if>
+      <if test="taxr != null" >
+        #{taxr,jdbcType=VARCHAR},
+      </if>
+      <if test="atax != null" >
+        #{atax,jdbcType=VARCHAR},
+      </if>
+      <if test="indx != null" >
+        #{indx,jdbcType=VARCHAR},
+      </if>
+      <if test="ovep != null" >
+        #{ovep,jdbcType=VARCHAR},
+      </if>
+      <if test="pror != null" >
+        #{pror,jdbcType=VARCHAR},
+      </if>
+      <if test="intp != null" >
+        #{intp,jdbcType=VARCHAR},
+      </if>
+      <if test="tdmt != null" >
+        #{tdmt,jdbcType=VARCHAR},
+      </if>
+      <if test="nett != null" >
+        #{nett,jdbcType=VARCHAR},
+      </if>
+      <if test="idfx != null" >
+        #{idfx,jdbcType=VARCHAR},
+      </if>
+      <if test="txin != null" >
+        #{txin,jdbcType=VARCHAR},
+      </if>
+      <if test="witl != null" >
+        #{witl,jdbcType=VARCHAR},
+      </if>
+      <if test="cinl != null" >
+        #{cinl,jdbcType=VARCHAR},
+      </if>
+      <if test="osub != null" >
+        #{osub,jdbcType=VARCHAR},
+      </if>
+      <if test="maex != null" >
+        #{maex,jdbcType=VARCHAR},
+      </if>
+      <if test="miex != null" >
+        #{miex,jdbcType=VARCHAR},
+      </if>
+      <if test="milt != null" >
+        #{milt,jdbcType=VARCHAR},
+      </if>
+      <if test="nblt != null" >
+        #{nblt,jdbcType=VARCHAR},
+      </if>
+      <if test="newd != null" >
+        #{newd,jdbcType=VARCHAR},
+      </if>
+      <if test="bolq != null" >
+        #{bolq,jdbcType=VARCHAR},
+      </if>
+      <if test="folq != null" >
+        #{folq,jdbcType=VARCHAR},
+      </if>
+      <if test="adtx != null" >
+        #{adtx,jdbcType=VARCHAR},
+      </if>
+      <if test="f70Ceti != null" >
+        #{f70Ceti,jdbcType=VARCHAR},
+      </if>
+      <if test="comp != null" >
+        #{comp,jdbcType=VARCHAR},
+      </if>
+      <if test="disc != null" >
+        #{disc,jdbcType=VARCHAR},
+      </if>
+      <if test="inco != null" >
+        #{inco,jdbcType=VARCHAR},
+      </if>
+      <if test="nser != null" >
+        #{nser,jdbcType=VARCHAR},
+      </if>
+      <if test="taxe != null" >
+        #{taxe,jdbcType=VARCHAR},
+      </if>
+      <if test="txnr != null" >
+        #{txnr,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.importdata.pojo.VActionOption" >
+    update v_action_option
+    <set >
+      <if test="infoId != null" >
+        info_id = #{infoId,jdbcType=VARCHAR},
+      </if>
+      <if test="caon != null" >
+        caon = #{caon,jdbcType=VARCHAR},
+      </if>
+      <if test="caop != null" >
+        caop = #{caop,jdbcType=VARCHAR},
+      </if>
+      <if test="disf != null" >
+        disf = #{disf,jdbcType=VARCHAR},
+      </if>
+      <if test="offe != null" >
+        offe = #{offe,jdbcType=VARCHAR},
+      </if>
+      <if test="optf != null" >
+        optf = #{optf,jdbcType=VARCHAR},
+      </if>
+      <if test="osta != null" >
+        osta = #{osta,jdbcType=VARCHAR},
+      </if>
+      <if test="f22Ceti != null" >
+        f22_ceti = #{f22Ceti,jdbcType=VARCHAR},
+      </if>
+      <if test="ndom != null" >
+        ndom = #{ndom,jdbcType=VARCHAR},
+      </if>
+      <if test="domi != null" >
+        domi = #{domi,jdbcType=VARCHAR},
+      </if>
+      <if test="optn != null" >
+        optn = #{optn,jdbcType=VARCHAR},
+      </if>
+      <if test="dfltStin != null" >
+        dflt_stin = #{dfltStin,jdbcType=VARCHAR},
+      </if>
+      <if test="rchg != null" >
+        rchg = #{rchg,jdbcType=VARCHAR},
+      </if>
+      <if test="cert != null" >
+        cert = #{cert,jdbcType=VARCHAR},
+      </if>
+      <if test="wthd != null" >
+        wthd = #{wthd,jdbcType=VARCHAR},
+      </if>
+      <if test="chan != null" >
+        chan = #{chan,jdbcType=VARCHAR},
+      </if>
+      <if test="apli != null" >
+        apli = #{apli,jdbcType=VARCHAR},
+      </if>
+      <if test="idenSec != null" >
+        iden_sec = #{idenSec,jdbcType=VARCHAR},
+      </if>
+      <if test="dvcp != null" >
+        dvcp = #{dvcp,jdbcType=VARCHAR},
+      </if>
+      <if test="eard != null" >
+        eard = #{eard,jdbcType=VARCHAR},
+      </if>
+      <if test="expi != null" >
+        expi = #{expi,jdbcType=VARCHAR},
+      </if>
+      <if test="mkdt != null" >
+        mkdt = #{mkdt,jdbcType=VARCHAR},
+      </if>
+      <if test="podt != null" >
+        podt = #{podt,jdbcType=VARCHAR},
+      </if>
+      <if test="subs != null" >
+        subs = #{subs,jdbcType=VARCHAR},
+      </if>
+      <if test="rddt != null" >
+        rddt = #{rddt,jdbcType=VARCHAR},
+      </if>
+      <if test="cvpr != null" >
+        cvpr = #{cvpr,jdbcType=VARCHAR},
+      </if>
+      <if test="bord != null" >
+        bord = #{bord,jdbcType=VARCHAR},
+      </if>
+      <if test="pric != null" >
+        pric = #{pric,jdbcType=VARCHAR},
+      </if>
+      <if test="revo != null" >
+        revo = #{revo,jdbcType=VARCHAR},
+      </if>
+      <if test="pwal != null" >
+        pwal = #{pwal,jdbcType=VARCHAR},
+      </if>
+      <if test="parl != null" >
+        parl = #{parl,jdbcType=VARCHAR},
+      </if>
+      <if test="susp != null" >
+        susp = #{susp,jdbcType=VARCHAR},
+      </if>
+      <if test="arev != null" >
+        arev = #{arev,jdbcType=VARCHAR},
+      </if>
+      <if test="dswo != null" >
+        dswo = #{dswo,jdbcType=VARCHAR},
+      </if>
+      <if test="grss != null" >
+        grss = #{grss,jdbcType=VARCHAR},
+      </if>
+      <if test="taxr != null" >
+        taxr = #{taxr,jdbcType=VARCHAR},
+      </if>
+      <if test="atax != null" >
+        atax = #{atax,jdbcType=VARCHAR},
+      </if>
+      <if test="indx != null" >
+        indx = #{indx,jdbcType=VARCHAR},
+      </if>
+      <if test="ovep != null" >
+        ovep = #{ovep,jdbcType=VARCHAR},
+      </if>
+      <if test="pror != null" >
+        pror = #{pror,jdbcType=VARCHAR},
+      </if>
+      <if test="intp != null" >
+        intp = #{intp,jdbcType=VARCHAR},
+      </if>
+      <if test="tdmt != null" >
+        tdmt = #{tdmt,jdbcType=VARCHAR},
+      </if>
+      <if test="nett != null" >
+        nett = #{nett,jdbcType=VARCHAR},
+      </if>
+      <if test="idfx != null" >
+        idfx = #{idfx,jdbcType=VARCHAR},
+      </if>
+      <if test="txin != null" >
+        txin = #{txin,jdbcType=VARCHAR},
+      </if>
+      <if test="witl != null" >
+        witl = #{witl,jdbcType=VARCHAR},
+      </if>
+      <if test="cinl != null" >
+        cinl = #{cinl,jdbcType=VARCHAR},
+      </if>
+      <if test="osub != null" >
+        osub = #{osub,jdbcType=VARCHAR},
+      </if>
+      <if test="maex != null" >
+        maex = #{maex,jdbcType=VARCHAR},
+      </if>
+      <if test="miex != null" >
+        miex = #{miex,jdbcType=VARCHAR},
+      </if>
+      <if test="milt != null" >
+        milt = #{milt,jdbcType=VARCHAR},
+      </if>
+      <if test="nblt != null" >
+        nblt = #{nblt,jdbcType=VARCHAR},
+      </if>
+      <if test="newd != null" >
+        newd = #{newd,jdbcType=VARCHAR},
+      </if>
+      <if test="bolq != null" >
+        bolq = #{bolq,jdbcType=VARCHAR},
+      </if>
+      <if test="folq != null" >
+        folq = #{folq,jdbcType=VARCHAR},
+      </if>
+      <if test="adtx != null" >
+        adtx = #{adtx,jdbcType=VARCHAR},
+      </if>
+      <if test="f70Ceti != null" >
+        f70_ceti = #{f70Ceti,jdbcType=VARCHAR},
+      </if>
+      <if test="comp != null" >
+        comp = #{comp,jdbcType=VARCHAR},
+      </if>
+      <if test="disc != null" >
+        disc = #{disc,jdbcType=VARCHAR},
+      </if>
+      <if test="inco != null" >
+        inco = #{inco,jdbcType=VARCHAR},
+      </if>
+      <if test="nser != null" >
+        nser = #{nser,jdbcType=VARCHAR},
+      </if>
+      <if test="taxe != null" >
+        taxe = #{taxe,jdbcType=VARCHAR},
+      </if>
+      <if test="txnr != null" >
+        txnr = #{txnr,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where caoptn_id = #{caoptnId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.importdata.pojo.VActionOption" >
+    update v_action_option
+    set info_id = #{infoId,jdbcType=VARCHAR},
+      caon = #{caon,jdbcType=VARCHAR},
+      caop = #{caop,jdbcType=VARCHAR},
+      disf = #{disf,jdbcType=VARCHAR},
+      offe = #{offe,jdbcType=VARCHAR},
+      optf = #{optf,jdbcType=VARCHAR},
+      osta = #{osta,jdbcType=VARCHAR},
+      f22_ceti = #{f22Ceti,jdbcType=VARCHAR},
+      ndom = #{ndom,jdbcType=VARCHAR},
+      domi = #{domi,jdbcType=VARCHAR},
+      optn = #{optn,jdbcType=VARCHAR},
+      dflt_stin = #{dfltStin,jdbcType=VARCHAR},
+      rchg = #{rchg,jdbcType=VARCHAR},
+      cert = #{cert,jdbcType=VARCHAR},
+      wthd = #{wthd,jdbcType=VARCHAR},
+      chan = #{chan,jdbcType=VARCHAR},
+      apli = #{apli,jdbcType=VARCHAR},
+      iden_sec = #{idenSec,jdbcType=VARCHAR},
+      dvcp = #{dvcp,jdbcType=VARCHAR},
+      eard = #{eard,jdbcType=VARCHAR},
+      expi = #{expi,jdbcType=VARCHAR},
+      mkdt = #{mkdt,jdbcType=VARCHAR},
+      podt = #{podt,jdbcType=VARCHAR},
+      subs = #{subs,jdbcType=VARCHAR},
+      rddt = #{rddt,jdbcType=VARCHAR},
+      cvpr = #{cvpr,jdbcType=VARCHAR},
+      bord = #{bord,jdbcType=VARCHAR},
+      pric = #{pric,jdbcType=VARCHAR},
+      revo = #{revo,jdbcType=VARCHAR},
+      pwal = #{pwal,jdbcType=VARCHAR},
+      parl = #{parl,jdbcType=VARCHAR},
+      susp = #{susp,jdbcType=VARCHAR},
+      arev = #{arev,jdbcType=VARCHAR},
+      dswo = #{dswo,jdbcType=VARCHAR},
+      grss = #{grss,jdbcType=VARCHAR},
+      taxr = #{taxr,jdbcType=VARCHAR},
+      atax = #{atax,jdbcType=VARCHAR},
+      indx = #{indx,jdbcType=VARCHAR},
+      ovep = #{ovep,jdbcType=VARCHAR},
+      pror = #{pror,jdbcType=VARCHAR},
+      intp = #{intp,jdbcType=VARCHAR},
+      tdmt = #{tdmt,jdbcType=VARCHAR},
+      nett = #{nett,jdbcType=VARCHAR},
+      idfx = #{idfx,jdbcType=VARCHAR},
+      txin = #{txin,jdbcType=VARCHAR},
+      witl = #{witl,jdbcType=VARCHAR},
+      cinl = #{cinl,jdbcType=VARCHAR},
+      osub = #{osub,jdbcType=VARCHAR},
+      maex = #{maex,jdbcType=VARCHAR},
+      miex = #{miex,jdbcType=VARCHAR},
+      milt = #{milt,jdbcType=VARCHAR},
+      nblt = #{nblt,jdbcType=VARCHAR},
+      newd = #{newd,jdbcType=VARCHAR},
+      bolq = #{bolq,jdbcType=VARCHAR},
+      folq = #{folq,jdbcType=VARCHAR},
+      adtx = #{adtx,jdbcType=VARCHAR},
+      f70_ceti = #{f70Ceti,jdbcType=VARCHAR},
+      comp = #{comp,jdbcType=VARCHAR},
+      disc = #{disc,jdbcType=VARCHAR},
+      inco = #{inco,jdbcType=VARCHAR},
+      nser = #{nser,jdbcType=VARCHAR},
+      taxe = #{taxe,jdbcType=VARCHAR},
+      txnr = #{txnr,jdbcType=VARCHAR}
+    where caoptn_id = #{caoptnId,jdbcType=VARCHAR}
+  </update>
+</mapper>

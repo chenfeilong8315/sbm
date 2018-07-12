@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.importdata.mapper.VIntermSecMapper" >
+  <resultMap id="BaseResultMap" type="com.importdata.pojo.VIntermSec" >
+    <id column="interm_sec_id" property="intermSecId" jdbcType="VARCHAR" />
+    <result column="info_id" property="infoId" jdbcType="VARCHAR" />
+    <result column="iden_sec" property="idenSec" jdbcType="VARCHAR" />
+    <result column="qint" property="qint" jdbcType="VARCHAR" />
+    <result column="inba" property="inba" jdbcType="VARCHAR" />
+    <result column="unba" property="unba" jdbcType="VARCHAR" />
+    <result column="disf" property="disf" jdbcType="VARCHAR" />
+    <result column="sell" property="sell" jdbcType="VARCHAR" />
+    <result column="rtun" property="rtun" jdbcType="VARCHAR" />
+    <result column="mrkt" property="mrkt" jdbcType="VARCHAR" />
+    <result column="expi" property="expi" jdbcType="VARCHAR" />
+    <result column="post" property="post" jdbcType="VARCHAR" />
+    <result column="trdp" property="trdp" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    interm_sec_id, info_id, iden_sec, qint, inba, unba, disf, sell, rtun, mrkt, expi, 
+    post, trdp
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from v_interm_sec
+    where interm_sec_id = #{intermSecId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from v_interm_sec
+    where interm_sec_id = #{intermSecId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.importdata.pojo.VIntermSec" >
+    insert into v_interm_sec (interm_sec_id, info_id, iden_sec, 
+      qint, inba, unba, disf, 
+      sell, rtun, mrkt, expi, 
+      post, trdp)
+    values (#{intermSecId,jdbcType=VARCHAR}, #{infoId,jdbcType=VARCHAR}, #{idenSec,jdbcType=VARCHAR}, 
+      #{qint,jdbcType=VARCHAR}, #{inba,jdbcType=VARCHAR}, #{unba,jdbcType=VARCHAR}, #{disf,jdbcType=VARCHAR}, 
+      #{sell,jdbcType=VARCHAR}, #{rtun,jdbcType=VARCHAR}, #{mrkt,jdbcType=VARCHAR}, #{expi,jdbcType=VARCHAR}, 
+      #{post,jdbcType=VARCHAR}, #{trdp,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.importdata.pojo.VIntermSec" >
+    insert into v_interm_sec
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="intermSecId != null" >
+        interm_sec_id,
+      </if>
+      <if test="infoId != null" >
+        info_id,
+      </if>
+      <if test="idenSec != null" >
+        iden_sec,
+      </if>
+      <if test="qint != null" >
+        qint,
+      </if>
+      <if test="inba != null" >
+        inba,
+      </if>
+      <if test="unba != null" >
+        unba,
+      </if>
+      <if test="disf != null" >
+        disf,
+      </if>
+      <if test="sell != null" >
+        sell,
+      </if>
+      <if test="rtun != null" >
+        rtun,
+      </if>
+      <if test="mrkt != null" >
+        mrkt,
+      </if>
+      <if test="expi != null" >
+        expi,
+      </if>
+      <if test="post != null" >
+        post,
+      </if>
+      <if test="trdp != null" >
+        trdp,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="intermSecId != null" >
+        #{intermSecId,jdbcType=VARCHAR},
+      </if>
+      <if test="infoId != null" >
+        #{infoId,jdbcType=VARCHAR},
+      </if>
+      <if test="idenSec != null" >
+        #{idenSec,jdbcType=VARCHAR},
+      </if>
+      <if test="qint != null" >
+        #{qint,jdbcType=VARCHAR},
+      </if>
+      <if test="inba != null" >
+        #{inba,jdbcType=VARCHAR},
+      </if>
+      <if test="unba != null" >
+        #{unba,jdbcType=VARCHAR},
+      </if>
+      <if test="disf != null" >
+        #{disf,jdbcType=VARCHAR},
+      </if>
+      <if test="sell != null" >
+        #{sell,jdbcType=VARCHAR},
+      </if>
+      <if test="rtun != null" >
+        #{rtun,jdbcType=VARCHAR},
+      </if>
+      <if test="mrkt != null" >
+        #{mrkt,jdbcType=VARCHAR},
+      </if>
+      <if test="expi != null" >
+        #{expi,jdbcType=VARCHAR},
+      </if>
+      <if test="post != null" >
+        #{post,jdbcType=VARCHAR},
+      </if>
+      <if test="trdp != null" >
+        #{trdp,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.importdata.pojo.VIntermSec" >
+    update v_interm_sec
+    <set >
+      <if test="infoId != null" >
+        info_id = #{infoId,jdbcType=VARCHAR},
+      </if>
+      <if test="idenSec != null" >
+        iden_sec = #{idenSec,jdbcType=VARCHAR},
+      </if>
+      <if test="qint != null" >
+        qint = #{qint,jdbcType=VARCHAR},
+      </if>
+      <if test="inba != null" >
+        inba = #{inba,jdbcType=VARCHAR},
+      </if>
+      <if test="unba != null" >
+        unba = #{unba,jdbcType=VARCHAR},
+      </if>
+      <if test="disf != null" >
+        disf = #{disf,jdbcType=VARCHAR},
+      </if>
+      <if test="sell != null" >
+        sell = #{sell,jdbcType=VARCHAR},
+      </if>
+      <if test="rtun != null" >
+        rtun = #{rtun,jdbcType=VARCHAR},
+      </if>
+      <if test="mrkt != null" >
+        mrkt = #{mrkt,jdbcType=VARCHAR},
+      </if>
+      <if test="expi != null" >
+        expi = #{expi,jdbcType=VARCHAR},
+      </if>
+      <if test="post != null" >
+        post = #{post,jdbcType=VARCHAR},
+      </if>
+      <if test="trdp != null" >
+        trdp = #{trdp,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where interm_sec_id = #{intermSecId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.importdata.pojo.VIntermSec" >
+    update v_interm_sec
+    set info_id = #{infoId,jdbcType=VARCHAR},
+      iden_sec = #{idenSec,jdbcType=VARCHAR},
+      qint = #{qint,jdbcType=VARCHAR},
+      inba = #{inba,jdbcType=VARCHAR},
+      unba = #{unba,jdbcType=VARCHAR},
+      disf = #{disf,jdbcType=VARCHAR},
+      sell = #{sell,jdbcType=VARCHAR},
+      rtun = #{rtun,jdbcType=VARCHAR},
+      mrkt = #{mrkt,jdbcType=VARCHAR},
+      expi = #{expi,jdbcType=VARCHAR},
+      post = #{post,jdbcType=VARCHAR},
+      trdp = #{trdp,jdbcType=VARCHAR}
+    where interm_sec_id = #{intermSecId,jdbcType=VARCHAR}
+  </update>
+</mapper>

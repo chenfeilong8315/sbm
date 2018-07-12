@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.importdata.mapper.VGenInfoA1Mapper" >
+  <resultMap id="BaseResultMap" type="com.importdata.pojo.VGenInfoA1" >
+    <id column="a1_info_id" property="a1InfoId" jdbcType="VARCHAR" />
+    <result column="info_id" property="infoId" jdbcType="VARCHAR" />
+    <result column="link_type" property="linkType" jdbcType="VARCHAR" />
+    <result column="link_msg" property="linkMsg" jdbcType="VARCHAR" />
+    <result column="msg_ref" property="msgRef" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    a1_info_id, info_id, link_type, link_msg, msg_ref
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from v_gen_info_a1
+    where a1_info_id = #{a1InfoId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from v_gen_info_a1
+    where a1_info_id = #{a1InfoId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.importdata.pojo.VGenInfoA1" >
+    insert into v_gen_info_a1 (a1_info_id, info_id, link_type, 
+      link_msg, msg_ref)
+    values (#{a1InfoId,jdbcType=VARCHAR}, #{infoId,jdbcType=VARCHAR}, #{linkType,jdbcType=VARCHAR}, 
+      #{linkMsg,jdbcType=VARCHAR}, #{msgRef,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.importdata.pojo.VGenInfoA1" >
+    insert into v_gen_info_a1
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="a1InfoId != null" >
+        a1_info_id,
+      </if>
+      <if test="infoId != null" >
+        info_id,
+      </if>
+      <if test="linkType != null" >
+        link_type,
+      </if>
+      <if test="linkMsg != null" >
+        link_msg,
+      </if>
+      <if test="msgRef != null" >
+        msg_ref,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="a1InfoId != null" >
+        #{a1InfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="infoId != null" >
+        #{infoId,jdbcType=VARCHAR},
+      </if>
+      <if test="linkType != null" >
+        #{linkType,jdbcType=VARCHAR},
+      </if>
+      <if test="linkMsg != null" >
+        #{linkMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="msgRef != null" >
+        #{msgRef,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.importdata.pojo.VGenInfoA1" >
+    update v_gen_info_a1
+    <set >
+      <if test="infoId != null" >
+        info_id = #{infoId,jdbcType=VARCHAR},
+      </if>
+      <if test="linkType != null" >
+        link_type = #{linkType,jdbcType=VARCHAR},
+      </if>
+      <if test="linkMsg != null" >
+        link_msg = #{linkMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="msgRef != null" >
+        msg_ref = #{msgRef,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where a1_info_id = #{a1InfoId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.importdata.pojo.VGenInfoA1" >
+    update v_gen_info_a1
+    set info_id = #{infoId,jdbcType=VARCHAR},
+      link_type = #{linkType,jdbcType=VARCHAR},
+      link_msg = #{linkMsg,jdbcType=VARCHAR},
+      msg_ref = #{msgRef,jdbcType=VARCHAR}
+    where a1_info_id = #{a1InfoId,jdbcType=VARCHAR}
+  </update>
+</mapper>

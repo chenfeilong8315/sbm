@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.importdata.mapper.VAddInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.importdata.pojo.VAddInfo" >
+    <id column="addinfo_id" property="addinfoId" jdbcType="VARCHAR" />
+    <result column="info_id" property="infoId" jdbcType="VARCHAR" />
+    <result column="adtx" property="adtx" jdbcType="VARCHAR" />
+    <result column="txnr" property="txnr" jdbcType="VARCHAR" />
+    <result column="regi" property="regi" jdbcType="VARCHAR" />
+    <result column="inco" property="inco" jdbcType="VARCHAR" />
+    <result column="comp" property="comp" jdbcType="VARCHAR" />
+    <result column="paco" property="paco" jdbcType="VARCHAR" />
+    <result column="taxe" property="taxe" jdbcType="VARCHAR" />
+    <result column="disc" property="disc" jdbcType="VARCHAR" />
+    <result column="bain" property="bain" jdbcType="VARCHAR" />
+    <result column="ceti" property="ceti" jdbcType="VARCHAR" />
+    <result column="meor" property="meor" jdbcType="VARCHAR" />
+    <result column="mere" property="mere" jdbcType="VARCHAR" />
+    <result column="isag" property="isag" jdbcType="VARCHAR" />
+    <result column="paya" property="paya" jdbcType="VARCHAR" />
+    <result column="codo" property="codo" jdbcType="VARCHAR" />
+    <result column="regr" property="regr" jdbcType="VARCHAR" />
+    <result column="f95_drop" property="f95Drop" jdbcType="VARCHAR" />
+    <result column="psag" property="psag" jdbcType="VARCHAR" />
+    <result column="resa" property="resa" jdbcType="VARCHAR" />
+    <result column="sola" property="sola" jdbcType="VARCHAR" />
+    <result column="infa" property="infa" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    addinfo_id, info_id, adtx, txnr, regi, inco, comp, paco, taxe, disc, bain, ceti, 
+    meor, mere, isag, paya, codo, regr, f95_drop, psag, resa, sola, infa
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from v_add_info
+    where addinfo_id = #{addinfoId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from v_add_info
+    where addinfo_id = #{addinfoId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.importdata.pojo.VAddInfo" >
+    insert into v_add_info (addinfo_id, info_id, adtx, 
+      txnr, regi, inco, comp, 
+      paco, taxe, disc, bain, 
+      ceti, meor, mere, isag, 
+      paya, codo, regr, f95_drop, 
+      psag, resa, sola, infa
+      )
+    values (#{addinfoId,jdbcType=VARCHAR}, #{infoId,jdbcType=VARCHAR}, #{adtx,jdbcType=VARCHAR}, 
+      #{txnr,jdbcType=VARCHAR}, #{regi,jdbcType=VARCHAR}, #{inco,jdbcType=VARCHAR}, #{comp,jdbcType=VARCHAR}, 
+      #{paco,jdbcType=VARCHAR}, #{taxe,jdbcType=VARCHAR}, #{disc,jdbcType=VARCHAR}, #{bain,jdbcType=VARCHAR}, 
+      #{ceti,jdbcType=VARCHAR}, #{meor,jdbcType=VARCHAR}, #{mere,jdbcType=VARCHAR}, #{isag,jdbcType=VARCHAR}, 
+      #{paya,jdbcType=VARCHAR}, #{codo,jdbcType=VARCHAR}, #{regr,jdbcType=VARCHAR}, #{f95Drop,jdbcType=VARCHAR}, 
+      #{psag,jdbcType=VARCHAR}, #{resa,jdbcType=VARCHAR}, #{sola,jdbcType=VARCHAR}, #{infa,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.importdata.pojo.VAddInfo" >
+    insert into v_add_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="addinfoId != null" >
+        addinfo_id,
+      </if>
+      <if test="infoId != null" >
+        info_id,
+      </if>
+      <if test="adtx != null" >
+        adtx,
+      </if>
+      <if test="txnr != null" >
+        txnr,
+      </if>
+      <if test="regi != null" >
+        regi,
+      </if>
+      <if test="inco != null" >
+        inco,
+      </if>
+      <if test="comp != null" >
+        comp,
+      </if>
+      <if test="paco != null" >
+        paco,
+      </if>
+      <if test="taxe != null" >
+        taxe,
+      </if>
+      <if test="disc != null" >
+        disc,
+      </if>
+      <if test="bain != null" >
+        bain,
+      </if>
+      <if test="ceti != null" >
+        ceti,
+      </if>
+      <if test="meor != null" >
+        meor,
+      </if>
+      <if test="mere != null" >
+        mere,
+      </if>
+      <if test="isag != null" >
+        isag,
+      </if>
+      <if test="paya != null" >
+        paya,
+      </if>
+      <if test="codo != null" >
+        codo,
+      </if>
+      <if test="regr != null" >
+        regr,
+      </if>
+      <if test="f95Drop != null" >
+        f95_drop,
+      </if>
+      <if test="psag != null" >
+        psag,
+      </if>
+      <if test="resa != null" >
+        resa,
+      </if>
+      <if test="sola != null" >
+        sola,
+      </if>
+      <if test="infa != null" >
+        infa,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="addinfoId != null" >
+        #{addinfoId,jdbcType=VARCHAR},
+      </if>
+      <if test="infoId != null" >
+        #{infoId,jdbcType=VARCHAR},
+      </if>
+      <if test="adtx != null" >
+        #{adtx,jdbcType=VARCHAR},
+      </if>
+      <if test="txnr != null" >
+        #{txnr,jdbcType=VARCHAR},
+      </if>
+      <if test="regi != null" >
+        #{regi,jdbcType=VARCHAR},
+      </if>
+      <if test="inco != null" >
+        #{inco,jdbcType=VARCHAR},
+      </if>
+      <if test="comp != null" >
+        #{comp,jdbcType=VARCHAR},
+      </if>
+      <if test="paco != null" >
+        #{paco,jdbcType=VARCHAR},
+      </if>
+      <if test="taxe != null" >
+        #{taxe,jdbcType=VARCHAR},
+      </if>
+      <if test="disc != null" >
+        #{disc,jdbcType=VARCHAR},
+      </if>
+      <if test="bain != null" >
+        #{bain,jdbcType=VARCHAR},
+      </if>
+      <if test="ceti != null" >
+        #{ceti,jdbcType=VARCHAR},
+      </if>
+      <if test="meor != null" >
+        #{meor,jdbcType=VARCHAR},
+      </if>
+      <if test="mere != null" >
+        #{mere,jdbcType=VARCHAR},
+      </if>
+      <if test="isag != null" >
+        #{isag,jdbcType=VARCHAR},
+      </if>
+      <if test="paya != null" >
+        #{paya,jdbcType=VARCHAR},
+      </if>
+      <if test="codo != null" >
+        #{codo,jdbcType=VARCHAR},
+      </if>
+      <if test="regr != null" >
+        #{regr,jdbcType=VARCHAR},
+      </if>
+      <if test="f95Drop != null" >
+        #{f95Drop,jdbcType=VARCHAR},
+      </if>
+      <if test="psag != null" >
+        #{psag,jdbcType=VARCHAR},
+      </if>
+      <if test="resa != null" >
+        #{resa,jdbcType=VARCHAR},
+      </if>
+      <if test="sola != null" >
+        #{sola,jdbcType=VARCHAR},
+      </if>
+      <if test="infa != null" >
+        #{infa,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.importdata.pojo.VAddInfo" >
+    update v_add_info
+    <set >
+      <if test="infoId != null" >
+        info_id = #{infoId,jdbcType=VARCHAR},
+      </if>
+      <if test="adtx != null" >
+        adtx = #{adtx,jdbcType=VARCHAR},
+      </if>
+      <if test="txnr != null" >
+        txnr = #{txnr,jdbcType=VARCHAR},
+      </if>
+      <if test="regi != null" >
+        regi = #{regi,jdbcType=VARCHAR},
+      </if>
+      <if test="inco != null" >
+        inco = #{inco,jdbcType=VARCHAR},
+      </if>
+      <if test="comp != null" >
+        comp = #{comp,jdbcType=VARCHAR},
+      </if>
+      <if test="paco != null" >
+        paco = #{paco,jdbcType=VARCHAR},
+      </if>
+      <if test="taxe != null" >
+        taxe = #{taxe,jdbcType=VARCHAR},
+      </if>
+      <if test="disc != null" >
+        disc = #{disc,jdbcType=VARCHAR},
+      </if>
+      <if test="bain != null" >
+        bain = #{bain,jdbcType=VARCHAR},
+      </if>
+      <if test="ceti != null" >
+        ceti = #{ceti,jdbcType=VARCHAR},
+      </if>
+      <if test="meor != null" >
+        meor = #{meor,jdbcType=VARCHAR},
+      </if>
+      <if test="mere != null" >
+        mere = #{mere,jdbcType=VARCHAR},
+      </if>
+      <if test="isag != null" >
+        isag = #{isag,jdbcType=VARCHAR},
+      </if>
+      <if test="paya != null" >
+        paya = #{paya,jdbcType=VARCHAR},
+      </if>
+      <if test="codo != null" >
+        codo = #{codo,jdbcType=VARCHAR},
+      </if>
+      <if test="regr != null" >
+        regr = #{regr,jdbcType=VARCHAR},
+      </if>
+      <if test="f95Drop != null" >
+        f95_drop = #{f95Drop,jdbcType=VARCHAR},
+      </if>
+      <if test="psag != null" >
+        psag = #{psag,jdbcType=VARCHAR},
+      </if>
+      <if test="resa != null" >
+        resa = #{resa,jdbcType=VARCHAR},
+      </if>
+      <if test="sola != null" >
+        sola = #{sola,jdbcType=VARCHAR},
+      </if>
+      <if test="infa != null" >
+        infa = #{infa,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where addinfo_id = #{addinfoId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.importdata.pojo.VAddInfo" >
+    update v_add_info
+    set info_id = #{infoId,jdbcType=VARCHAR},
+      adtx = #{adtx,jdbcType=VARCHAR},
+      txnr = #{txnr,jdbcType=VARCHAR},
+      regi = #{regi,jdbcType=VARCHAR},
+      inco = #{inco,jdbcType=VARCHAR},
+      comp = #{comp,jdbcType=VARCHAR},
+      paco = #{paco,jdbcType=VARCHAR},
+      taxe = #{taxe,jdbcType=VARCHAR},
+      disc = #{disc,jdbcType=VARCHAR},
+      bain = #{bain,jdbcType=VARCHAR},
+      ceti = #{ceti,jdbcType=VARCHAR},
+      meor = #{meor,jdbcType=VARCHAR},
+      mere = #{mere,jdbcType=VARCHAR},
+      isag = #{isag,jdbcType=VARCHAR},
+      paya = #{paya,jdbcType=VARCHAR},
+      codo = #{codo,jdbcType=VARCHAR},
+      regr = #{regr,jdbcType=VARCHAR},
+      f95_drop = #{f95Drop,jdbcType=VARCHAR},
+      psag = #{psag,jdbcType=VARCHAR},
+      resa = #{resa,jdbcType=VARCHAR},
+      sola = #{sola,jdbcType=VARCHAR},
+      infa = #{infa,jdbcType=VARCHAR}
+    where addinfo_id = #{addinfoId,jdbcType=VARCHAR}
+  </update>
+</mapper>

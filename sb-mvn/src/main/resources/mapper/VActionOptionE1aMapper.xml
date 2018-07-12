@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.importdata.mapper.VActionOptionE1aMapper" >
+  <resultMap id="BaseResultMap" type="com.importdata.pojo.VActionOptionE1a" >
+    <id column="e1a_caoptn_id" property="e1aCaoptnId" jdbcType="VARCHAR" />
+    <result column="e1_caoptn_id" property="e1CaoptnId" jdbcType="VARCHAR" />
+    <result column="plis" property="plis" jdbcType="VARCHAR" />
+    <result column="mico" property="mico" jdbcType="VARCHAR" />
+    <result column="clas" property="clas" jdbcType="VARCHAR" />
+    <result column="opst" property="opst" jdbcType="VARCHAR" />
+    <result column="deno" property="deno" jdbcType="VARCHAR" />
+    <result column="coup" property="coup" jdbcType="VARCHAR" />
+    <result column="frnr" property="frnr" jdbcType="VARCHAR" />
+    <result column="matu" property="matu" jdbcType="VARCHAR" />
+    <result column="f98_issu" property="f98Issu" jdbcType="VARCHAR" />
+    <result column="cald" property="cald" jdbcType="VARCHAR" />
+    <result column="putt" property="putt" jdbcType="VARCHAR" />
+    <result column="ddte" property="ddte" jdbcType="VARCHAR" />
+    <result column="conv" property="conv" jdbcType="VARCHAR" />
+    <result column="f90_issu" property="f90Issu" jdbcType="VARCHAR" />
+    <result column="prfc" property="prfc" jdbcType="VARCHAR" />
+    <result column="nwfc" property="nwfc" jdbcType="VARCHAR" />
+    <result column="intr" property="intr" jdbcType="VARCHAR" />
+    <result column="nxrt" property="nxrt" jdbcType="VARCHAR" />
+    <result column="mino" property="mino" jdbcType="VARCHAR" />
+    <result column="miex" property="miex" jdbcType="VARCHAR" />
+    <result column="milt" property="milt" jdbcType="VARCHAR" />
+    <result column="f36_size" property="f36Size" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    e1a_caoptn_id, e1_caoptn_id, plis, mico, clas, opst, deno, coup, frnr, matu, f98_issu, 
+    cald, putt, ddte, conv, f90_issu, prfc, nwfc, intr, nxrt, mino, miex, milt, f36_size
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from v_action_option_e1a
+    where e1a_caoptn_id = #{e1aCaoptnId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from v_action_option_e1a
+    where e1a_caoptn_id = #{e1aCaoptnId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.importdata.pojo.VActionOptionE1a" >
+    insert into v_action_option_e1a (e1a_caoptn_id, e1_caoptn_id, plis, 
+      mico, clas, opst, deno, 
+      coup, frnr, matu, f98_issu, 
+      cald, putt, ddte, conv, 
+      f90_issu, prfc, nwfc, 
+      intr, nxrt, mino, miex, 
+      milt, f36_size)
+    values (#{e1aCaoptnId,jdbcType=VARCHAR}, #{e1CaoptnId,jdbcType=VARCHAR}, #{plis,jdbcType=VARCHAR}, 
+      #{mico,jdbcType=VARCHAR}, #{clas,jdbcType=VARCHAR}, #{opst,jdbcType=VARCHAR}, #{deno,jdbcType=VARCHAR}, 
+      #{coup,jdbcType=VARCHAR}, #{frnr,jdbcType=VARCHAR}, #{matu,jdbcType=VARCHAR}, #{f98Issu,jdbcType=VARCHAR}, 
+      #{cald,jdbcType=VARCHAR}, #{putt,jdbcType=VARCHAR}, #{ddte,jdbcType=VARCHAR}, #{conv,jdbcType=VARCHAR}, 
+      #{f90Issu,jdbcType=VARCHAR}, #{prfc,jdbcType=VARCHAR}, #{nwfc,jdbcType=VARCHAR}, 
+      #{intr,jdbcType=VARCHAR}, #{nxrt,jdbcType=VARCHAR}, #{mino,jdbcType=VARCHAR}, #{miex,jdbcType=VARCHAR}, 
+      #{milt,jdbcType=VARCHAR}, #{f36Size,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.importdata.pojo.VActionOptionE1a" >
+    insert into v_action_option_e1a
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="e1aCaoptnId != null" >
+        e1a_caoptn_id,
+      </if>
+      <if test="e1CaoptnId != null" >
+        e1_caoptn_id,
+      </if>
+      <if test="plis != null" >
+        plis,
+      </if>
+      <if test="mico != null" >
+        mico,
+      </if>
+      <if test="clas != null" >
+        clas,
+      </if>
+      <if test="opst != null" >
+        opst,
+      </if>
+      <if test="deno != null" >
+        deno,
+      </if>
+      <if test="coup != null" >
+        coup,
+      </if>
+      <if test="frnr != null" >
+        frnr,
+      </if>
+      <if test="matu != null" >
+        matu,
+      </if>
+      <if test="f98Issu != null" >
+        f98_issu,
+      </if>
+      <if test="cald != null" >
+        cald,
+      </if>
+      <if test="putt != null" >
+        putt,
+      </if>
+      <if test="ddte != null" >
+        ddte,
+      </if>
+      <if test="conv != null" >
+        conv,
+      </if>
+      <if test="f90Issu != null" >
+        f90_issu,
+      </if>
+      <if test="prfc != null" >
+        prfc,
+      </if>
+      <if test="nwfc != null" >
+        nwfc,
+      </if>
+      <if test="intr != null" >
+        intr,
+      </if>
+      <if test="nxrt != null" >
+        nxrt,
+      </if>
+      <if test="mino != null" >
+        mino,
+      </if>
+      <if test="miex != null" >
+        miex,
+      </if>
+      <if test="milt != null" >
+        milt,
+      </if>
+      <if test="f36Size != null" >
+        f36_size,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="e1aCaoptnId != null" >
+        #{e1aCaoptnId,jdbcType=VARCHAR},
+      </if>
+      <if test="e1CaoptnId != null" >
+        #{e1CaoptnId,jdbcType=VARCHAR},
+      </if>
+      <if test="plis != null" >
+        #{plis,jdbcType=VARCHAR},
+      </if>
+      <if test="mico != null" >
+        #{mico,jdbcType=VARCHAR},
+      </if>
+      <if test="clas != null" >
+        #{clas,jdbcType=VARCHAR},
+      </if>
+      <if test="opst != null" >
+        #{opst,jdbcType=VARCHAR},
+      </if>
+      <if test="deno != null" >
+        #{deno,jdbcType=VARCHAR},
+      </if>
+      <if test="coup != null" >
+        #{coup,jdbcType=VARCHAR},
+      </if>
+      <if test="frnr != null" >
+        #{frnr,jdbcType=VARCHAR},
+      </if>
+      <if test="matu != null" >
+        #{matu,jdbcType=VARCHAR},
+      </if>
+      <if test="f98Issu != null" >
+        #{f98Issu,jdbcType=VARCHAR},
+      </if>
+      <if test="cald != null" >
+        #{cald,jdbcType=VARCHAR},
+      </if>
+      <if test="putt != null" >
+        #{putt,jdbcType=VARCHAR},
+      </if>
+      <if test="ddte != null" >
+        #{ddte,jdbcType=VARCHAR},
+      </if>
+      <if test="conv != null" >
+        #{conv,jdbcType=VARCHAR},
+      </if>
+      <if test="f90Issu != null" >
+        #{f90Issu,jdbcType=VARCHAR},
+      </if>
+      <if test="prfc != null" >
+        #{prfc,jdbcType=VARCHAR},
+      </if>
+      <if test="nwfc != null" >
+        #{nwfc,jdbcType=VARCHAR},
+      </if>
+      <if test="intr != null" >
+        #{intr,jdbcType=VARCHAR},
+      </if>
+      <if test="nxrt != null" >
+        #{nxrt,jdbcType=VARCHAR},
+      </if>
+      <if test="mino != null" >
+        #{mino,jdbcType=VARCHAR},
+      </if>
+      <if test="miex != null" >
+        #{miex,jdbcType=VARCHAR},
+      </if>
+      <if test="milt != null" >
+        #{milt,jdbcType=VARCHAR},
+      </if>
+      <if test="f36Size != null" >
+        #{f36Size,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.importdata.pojo.VActionOptionE1a" >
+    update v_action_option_e1a
+    <set >
+      <if test="e1CaoptnId != null" >
+        e1_caoptn_id = #{e1CaoptnId,jdbcType=VARCHAR},
+      </if>
+      <if test="plis != null" >
+        plis = #{plis,jdbcType=VARCHAR},
+      </if>
+      <if test="mico != null" >
+        mico = #{mico,jdbcType=VARCHAR},
+      </if>
+      <if test="clas != null" >
+        clas = #{clas,jdbcType=VARCHAR},
+      </if>
+      <if test="opst != null" >
+        opst = #{opst,jdbcType=VARCHAR},
+      </if>
+      <if test="deno != null" >
+        deno = #{deno,jdbcType=VARCHAR},
+      </if>
+      <if test="coup != null" >
+        coup = #{coup,jdbcType=VARCHAR},
+      </if>
+      <if test="frnr != null" >
+        frnr = #{frnr,jdbcType=VARCHAR},
+      </if>
+      <if test="matu != null" >
+        matu = #{matu,jdbcType=VARCHAR},
+      </if>
+      <if test="f98Issu != null" >
+        f98_issu = #{f98Issu,jdbcType=VARCHAR},
+      </if>
+      <if test="cald != null" >
+        cald = #{cald,jdbcType=VARCHAR},
+      </if>
+      <if test="putt != null" >
+        putt = #{putt,jdbcType=VARCHAR},
+      </if>
+      <if test="ddte != null" >
+        ddte = #{ddte,jdbcType=VARCHAR},
+      </if>
+      <if test="conv != null" >
+        conv = #{conv,jdbcType=VARCHAR},
+      </if>
+      <if test="f90Issu != null" >
+        f90_issu = #{f90Issu,jdbcType=VARCHAR},
+      </if>
+      <if test="prfc != null" >
+        prfc = #{prfc,jdbcType=VARCHAR},
+      </if>
+      <if test="nwfc != null" >
+        nwfc = #{nwfc,jdbcType=VARCHAR},
+      </if>
+      <if test="intr != null" >
+        intr = #{intr,jdbcType=VARCHAR},
+      </if>
+      <if test="nxrt != null" >
+        nxrt = #{nxrt,jdbcType=VARCHAR},
+      </if>
+      <if test="mino != null" >
+        mino = #{mino,jdbcType=VARCHAR},
+      </if>
+      <if test="miex != null" >
+        miex = #{miex,jdbcType=VARCHAR},
+      </if>
+      <if test="milt != null" >
+        milt = #{milt,jdbcType=VARCHAR},
+      </if>
+      <if test="f36Size != null" >
+        f36_size = #{f36Size,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where e1a_caoptn_id = #{e1aCaoptnId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.importdata.pojo.VActionOptionE1a" >
+    update v_action_option_e1a
+    set e1_caoptn_id = #{e1CaoptnId,jdbcType=VARCHAR},
+      plis = #{plis,jdbcType=VARCHAR},
+      mico = #{mico,jdbcType=VARCHAR},
+      clas = #{clas,jdbcType=VARCHAR},
+      opst = #{opst,jdbcType=VARCHAR},
+      deno = #{deno,jdbcType=VARCHAR},
+      coup = #{coup,jdbcType=VARCHAR},
+      frnr = #{frnr,jdbcType=VARCHAR},
+      matu = #{matu,jdbcType=VARCHAR},
+      f98_issu = #{f98Issu,jdbcType=VARCHAR},
+      cald = #{cald,jdbcType=VARCHAR},
+      putt = #{putt,jdbcType=VARCHAR},
+      ddte = #{ddte,jdbcType=VARCHAR},
+      conv = #{conv,jdbcType=VARCHAR},
+      f90_issu = #{f90Issu,jdbcType=VARCHAR},
+      prfc = #{prfc,jdbcType=VARCHAR},
+      nwfc = #{nwfc,jdbcType=VARCHAR},
+      intr = #{intr,jdbcType=VARCHAR},
+      nxrt = #{nxrt,jdbcType=VARCHAR},
+      mino = #{mino,jdbcType=VARCHAR},
+      miex = #{miex,jdbcType=VARCHAR},
+      milt = #{milt,jdbcType=VARCHAR},
+      f36_size = #{f36Size,jdbcType=VARCHAR}
+    where e1a_caoptn_id = #{e1aCaoptnId,jdbcType=VARCHAR}
+  </update>
+</mapper>

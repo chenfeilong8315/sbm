@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.importdata.mapper.VGenInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.importdata.pojo.VGenInfo" >
+    <id column="info_id" property="infoId" jdbcType="VARCHAR" />
+    <result column="page_num" property="pageNum" jdbcType="VARCHAR" />
+    <result column="corp" property="corp" jdbcType="VARCHAR" />
+    <result column="seme" property="seme" jdbcType="VARCHAR" />
+    <result column="coaf" property="coaf" jdbcType="VARCHAR" />
+    <result column="msg_fun" property="msgFun" jdbcType="VARCHAR" />
+    <result column="caep" property="caep" jdbcType="VARCHAR" />
+    <result column="caev" property="caev" jdbcType="VARCHAR" />
+    <result column="camv" property="camv" jdbcType="VARCHAR" />
+    <result column="prep_dt" property="prepDt" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="create_dt" property="createDt" jdbcType="DATE" />
+    <result column="update_dt" property="updateDt" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    info_id, page_num, corp, seme, coaf, msg_fun, caep, caev, camv, prep_dt, status, 
+    create_dt, update_dt
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from v_gen_info
+    where info_id = #{infoId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from v_gen_info
+    where info_id = #{infoId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.importdata.pojo.VGenInfo" >
+    insert into v_gen_info (info_id, page_num, corp, 
+      seme, coaf, msg_fun, 
+      caep, caev, camv, prep_dt, 
+      status, create_dt, update_dt
+      )
+    values (#{infoId,jdbcType=VARCHAR}, #{pageNum,jdbcType=VARCHAR}, #{corp,jdbcType=VARCHAR}, 
+      #{seme,jdbcType=VARCHAR}, #{coaf,jdbcType=VARCHAR}, #{msgFun,jdbcType=VARCHAR}, 
+      #{caep,jdbcType=VARCHAR}, #{caev,jdbcType=VARCHAR}, #{camv,jdbcType=VARCHAR}, #{prepDt,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{createDt,jdbcType=DATE}, #{updateDt,jdbcType=DATE}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.importdata.pojo.VGenInfo" >
+    insert into v_gen_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="infoId != null" >
+        info_id,
+      </if>
+      <if test="pageNum != null" >
+        page_num,
+      </if>
+      <if test="corp != null" >
+        corp,
+      </if>
+      <if test="seme != null" >
+        seme,
+      </if>
+      <if test="coaf != null" >
+        coaf,
+      </if>
+      <if test="msgFun != null" >
+        msg_fun,
+      </if>
+      <if test="caep != null" >
+        caep,
+      </if>
+      <if test="caev != null" >
+        caev,
+      </if>
+      <if test="camv != null" >
+        camv,
+      </if>
+      <if test="prepDt != null" >
+        prep_dt,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+        create_dt,
+      <if test="updateDt != null" >
+        update_dt,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="infoId != null" >
+        #{infoId,jdbcType=VARCHAR},
+      </if>
+      <if test="pageNum != null" >
+        #{pageNum,jdbcType=VARCHAR},
+      </if>
+      <if test="corp != null" >
+        #{corp,jdbcType=VARCHAR},
+      </if>
+      <if test="seme != null" >
+        #{seme,jdbcType=VARCHAR},
+      </if>
+      <if test="coaf != null" >
+        #{coaf,jdbcType=VARCHAR},
+      </if>
+      <if test="msgFun != null" >
+        #{msgFun,jdbcType=VARCHAR},
+      </if>
+      <if test="caep != null" >
+        #{caep,jdbcType=VARCHAR},
+      </if>
+      <if test="caev != null" >
+        #{caev,jdbcType=VARCHAR},
+      </if>
+      <if test="camv != null" >
+        #{camv,jdbcType=VARCHAR},
+      </if>
+      <if test="prepDt != null" >
+        #{prepDt,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      now(),
+      <if test="updateDt != null" >
+        #{updateDt,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.importdata.pojo.VGenInfo" >
+    update v_gen_info
+    <set >
+      <if test="pageNum != null" >
+        page_num = #{pageNum,jdbcType=VARCHAR},
+      </if>
+      <if test="corp != null" >
+        corp = #{corp,jdbcType=VARCHAR},
+      </if>
+      <if test="seme != null" >
+        seme = #{seme,jdbcType=VARCHAR},
+      </if>
+      <if test="coaf != null" >
+        coaf = #{coaf,jdbcType=VARCHAR},
+      </if>
+      <if test="msgFun != null" >
+        msg_fun = #{msgFun,jdbcType=VARCHAR},
+      </if>
+      <if test="caep != null" >
+        caep = #{caep,jdbcType=VARCHAR},
+      </if>
+      <if test="caev != null" >
+        caev = #{caev,jdbcType=VARCHAR},
+      </if>
+      <if test="camv != null" >
+        camv = #{camv,jdbcType=VARCHAR},
+      </if>
+      <if test="prepDt != null" >
+        prep_dt = #{prepDt,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="createDt != null" >
+        create_dt = #{createDt,jdbcType=DATE},
+      </if>
+      <if test="updateDt != null" >
+        update_dt = #{updateDt,jdbcType=DATE},
+      </if>
+    </set>
+    where info_id = #{infoId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.importdata.pojo.VGenInfo" >
+    update v_gen_info
+    set page_num = #{pageNum,jdbcType=VARCHAR},
+      corp = #{corp,jdbcType=VARCHAR},
+      seme = #{seme,jdbcType=VARCHAR},
+      coaf = #{coaf,jdbcType=VARCHAR},
+      msg_fun = #{msgFun,jdbcType=VARCHAR},
+      caep = #{caep,jdbcType=VARCHAR},
+      caev = #{caev,jdbcType=VARCHAR},
+      camv = #{camv,jdbcType=VARCHAR},
+      prep_dt = #{prepDt,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      create_dt = #{createDt,jdbcType=DATE},
+      update_dt = #{updateDt,jdbcType=DATE}
+    where info_id = #{infoId,jdbcType=VARCHAR}
+  </update>
+</mapper>

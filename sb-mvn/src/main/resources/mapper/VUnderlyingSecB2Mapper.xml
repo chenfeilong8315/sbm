@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.importdata.mapper.VUnderlyingSecB2Mapper" >
+  <resultMap id="BaseResultMap" type="com.importdata.pojo.VUnderlyingSecB2" >
+    <id column="b2_usecu_id" property="b2UsecuId" jdbcType="VARCHAR" />
+    <result column="usecu_id" property="usecuId" jdbcType="VARCHAR" />
+    <result column="acow" property="acow" jdbcType="VARCHAR" />
+    <result column="safe_account" property="safeAccount" jdbcType="VARCHAR" />
+    <result column="safe_place" property="safePlace" jdbcType="VARCHAR" />
+    <result column="elig" property="elig" jdbcType="VARCHAR" />
+    <result column="blok" property="blok" jdbcType="VARCHAR" />
+    <result column="borr" property="borr" jdbcType="VARCHAR" />
+    <result column="coli" property="coli" jdbcType="VARCHAR" />
+    <result column="colo" property="colo" jdbcType="VARCHAR" />
+    <result column="loan" property="loan" jdbcType="VARCHAR" />
+    <result column="pend" property="pend" jdbcType="VARCHAR" />
+    <result column="penr" property="penr" jdbcType="VARCHAR" />
+    <result column="rego" property="rego" jdbcType="VARCHAR" />
+    <result column="sett" property="sett" jdbcType="VARCHAR" />
+    <result column="spos" property="spos" jdbcType="VARCHAR" />
+    <result column="trad" property="trad" jdbcType="VARCHAR" />
+    <result column="f93_tran" property="f93Tran" jdbcType="VARCHAR" />
+    <result column="nomi" property="nomi" jdbcType="VARCHAR" />
+    <result column="unba" property="unba" jdbcType="VARCHAR" />
+    <result column="inba" property="inba" jdbcType="VARCHAR" />
+    <result column="obal" property="obal" jdbcType="VARCHAR" />
+    <result column="affb" property="affb" jdbcType="VARCHAR" />
+    <result column="unaf" property="unaf" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    b2_usecu_id, usecu_id, acow, safe_account, safe_place, elig, blok, borr, coli, colo, 
+    loan, pend, penr, rego, sett, spos, trad, f93_tran, nomi, unba, inba, obal, affb, 
+    unaf
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from v_underlying_sec_b2
+    where b2_usecu_id = #{b2UsecuId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from v_underlying_sec_b2
+    where b2_usecu_id = #{b2UsecuId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.importdata.pojo.VUnderlyingSecB2" >
+    insert into v_underlying_sec_b2 (b2_usecu_id, usecu_id, acow, 
+      safe_account, safe_place, elig, 
+      blok, borr, coli, colo, 
+      loan, pend, penr, rego, 
+      sett, spos, trad, f93_tran, 
+      nomi, unba, inba, obal, 
+      affb, unaf)
+    values (#{b2UsecuId,jdbcType=VARCHAR}, #{usecuId,jdbcType=VARCHAR}, #{acow,jdbcType=VARCHAR}, 
+      #{safeAccount,jdbcType=VARCHAR}, #{safePlace,jdbcType=VARCHAR}, #{elig,jdbcType=VARCHAR}, 
+      #{blok,jdbcType=VARCHAR}, #{borr,jdbcType=VARCHAR}, #{coli,jdbcType=VARCHAR}, #{colo,jdbcType=VARCHAR}, 
+      #{loan,jdbcType=VARCHAR}, #{pend,jdbcType=VARCHAR}, #{penr,jdbcType=VARCHAR}, #{rego,jdbcType=VARCHAR}, 
+      #{sett,jdbcType=VARCHAR}, #{spos,jdbcType=VARCHAR}, #{trad,jdbcType=VARCHAR}, #{f93Tran,jdbcType=VARCHAR}, 
+      #{nomi,jdbcType=VARCHAR}, #{unba,jdbcType=VARCHAR}, #{inba,jdbcType=VARCHAR}, #{obal,jdbcType=VARCHAR}, 
+      #{affb,jdbcType=VARCHAR}, #{unaf,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.importdata.pojo.VUnderlyingSecB2" >
+    insert into v_underlying_sec_b2
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="b2UsecuId != null" >
+        b2_usecu_id,
+      </if>
+      <if test="usecuId != null" >
+        usecu_id,
+      </if>
+      <if test="acow != null" >
+        acow,
+      </if>
+      <if test="safeAccount != null" >
+        safe_account,
+      </if>
+      <if test="safePlace != null" >
+        safe_place,
+      </if>
+      <if test="elig != null" >
+        elig,
+      </if>
+      <if test="blok != null" >
+        blok,
+      </if>
+      <if test="borr != null" >
+        borr,
+      </if>
+      <if test="coli != null" >
+        coli,
+      </if>
+      <if test="colo != null" >
+        colo,
+      </if>
+      <if test="loan != null" >
+        loan,
+      </if>
+      <if test="pend != null" >
+        pend,
+      </if>
+      <if test="penr != null" >
+        penr,
+      </if>
+      <if test="rego != null" >
+        rego,
+      </if>
+      <if test="sett != null" >
+        sett,
+      </if>
+      <if test="spos != null" >
+        spos,
+      </if>
+      <if test="trad != null" >
+        trad,
+      </if>
+      <if test="f93Tran != null" >
+        f93_tran,
+      </if>
+      <if test="nomi != null" >
+        nomi,
+      </if>
+      <if test="unba != null" >
+        unba,
+      </if>
+      <if test="inba != null" >
+        inba,
+      </if>
+      <if test="obal != null" >
+        obal,
+      </if>
+      <if test="affb != null" >
+        affb,
+      </if>
+      <if test="unaf != null" >
+        unaf,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="b2UsecuId != null" >
+        #{b2UsecuId,jdbcType=VARCHAR},
+      </if>
+      <if test="usecuId != null" >
+        #{usecuId,jdbcType=VARCHAR},
+      </if>
+      <if test="acow != null" >
+        #{acow,jdbcType=VARCHAR},
+      </if>
+      <if test="safeAccount != null" >
+        #{safeAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="safePlace != null" >
+        #{safePlace,jdbcType=VARCHAR},
+      </if>
+      <if test="elig != null" >
+        #{elig,jdbcType=VARCHAR},
+      </if>
+      <if test="blok != null" >
+        #{blok,jdbcType=VARCHAR},
+      </if>
+      <if test="borr != null" >
+        #{borr,jdbcType=VARCHAR},
+      </if>
+      <if test="coli != null" >
+        #{coli,jdbcType=VARCHAR},
+      </if>
+      <if test="colo != null" >
+        #{colo,jdbcType=VARCHAR},
+      </if>
+      <if test="loan != null" >
+        #{loan,jdbcType=VARCHAR},
+      </if>
+      <if test="pend != null" >
+        #{pend,jdbcType=VARCHAR},
+      </if>
+      <if test="penr != null" >
+        #{penr,jdbcType=VARCHAR},
+      </if>
+      <if test="rego != null" >
+        #{rego,jdbcType=VARCHAR},
+      </if>
+      <if test="sett != null" >
+        #{sett,jdbcType=VARCHAR},
+      </if>
+      <if test="spos != null" >
+        #{spos,jdbcType=VARCHAR},
+      </if>
+      <if test="trad != null" >
+        #{trad,jdbcType=VARCHAR},
+      </if>
+      <if test="f93Tran != null" >
+        #{f93Tran,jdbcType=VARCHAR},
+      </if>
+      <if test="nomi != null" >
+        #{nomi,jdbcType=VARCHAR},
+      </if>
+      <if test="unba != null" >
+        #{unba,jdbcType=VARCHAR},
+      </if>
+      <if test="inba != null" >
+        #{inba,jdbcType=VARCHAR},
+      </if>
+      <if test="obal != null" >
+        #{obal,jdbcType=VARCHAR},
+      </if>
+      <if test="affb != null" >
+        #{affb,jdbcType=VARCHAR},
+      </if>
+      <if test="unaf != null" >
+        #{unaf,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.importdata.pojo.VUnderlyingSecB2" >
+    update v_underlying_sec_b2
+    <set >
+      <if test="usecuId != null" >
+        usecu_id = #{usecuId,jdbcType=VARCHAR},
+      </if>
+      <if test="acow != null" >
+        acow = #{acow,jdbcType=VARCHAR},
+      </if>
+      <if test="safeAccount != null" >
+        safe_account = #{safeAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="safePlace != null" >
+        safe_place = #{safePlace,jdbcType=VARCHAR},
+      </if>
+      <if test="elig != null" >
+        elig = #{elig,jdbcType=VARCHAR},
+      </if>
+      <if test="blok != null" >
+        blok = #{blok,jdbcType=VARCHAR},
+      </if>
+      <if test="borr != null" >
+        borr = #{borr,jdbcType=VARCHAR},
+      </if>
+      <if test="coli != null" >
+        coli = #{coli,jdbcType=VARCHAR},
+      </if>
+      <if test="colo != null" >
+        colo = #{colo,jdbcType=VARCHAR},
+      </if>
+      <if test="loan != null" >
+        loan = #{loan,jdbcType=VARCHAR},
+      </if>
+      <if test="pend != null" >
+        pend = #{pend,jdbcType=VARCHAR},
+      </if>
+      <if test="penr != null" >
+        penr = #{penr,jdbcType=VARCHAR},
+      </if>
+      <if test="rego != null" >
+        rego = #{rego,jdbcType=VARCHAR},
+      </if>
+      <if test="sett != null" >
+        sett = #{sett,jdbcType=VARCHAR},
+      </if>
+      <if test="spos != null" >
+        spos = #{spos,jdbcType=VARCHAR},
+      </if>
+      <if test="trad != null" >
+        trad = #{trad,jdbcType=VARCHAR},
+      </if>
+      <if test="f93Tran != null" >
+        f93_tran = #{f93Tran,jdbcType=VARCHAR},
+      </if>
+      <if test="nomi != null" >
+        nomi = #{nomi,jdbcType=VARCHAR},
+      </if>
+      <if test="unba != null" >
+        unba = #{unba,jdbcType=VARCHAR},
+      </if>
+      <if test="inba != null" >
+        inba = #{inba,jdbcType=VARCHAR},
+      </if>
+      <if test="obal != null" >
+        obal = #{obal,jdbcType=VARCHAR},
+      </if>
+      <if test="affb != null" >
+        affb = #{affb,jdbcType=VARCHAR},
+      </if>
+      <if test="unaf != null" >
+        unaf = #{unaf,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where b2_usecu_id = #{b2UsecuId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.importdata.pojo.VUnderlyingSecB2" >
+    update v_underlying_sec_b2
+    set usecu_id = #{usecuId,jdbcType=VARCHAR},
+      acow = #{acow,jdbcType=VARCHAR},
+      safe_account = #{safeAccount,jdbcType=VARCHAR},
+      safe_place = #{safePlace,jdbcType=VARCHAR},
+      elig = #{elig,jdbcType=VARCHAR},
+      blok = #{blok,jdbcType=VARCHAR},
+      borr = #{borr,jdbcType=VARCHAR},
+      coli = #{coli,jdbcType=VARCHAR},
+      colo = #{colo,jdbcType=VARCHAR},
+      loan = #{loan,jdbcType=VARCHAR},
+      pend = #{pend,jdbcType=VARCHAR},
+      penr = #{penr,jdbcType=VARCHAR},
+      rego = #{rego,jdbcType=VARCHAR},
+      sett = #{sett,jdbcType=VARCHAR},
+      spos = #{spos,jdbcType=VARCHAR},
+      trad = #{trad,jdbcType=VARCHAR},
+      f93_tran = #{f93Tran,jdbcType=VARCHAR},
+      nomi = #{nomi,jdbcType=VARCHAR},
+      unba = #{unba,jdbcType=VARCHAR},
+      inba = #{inba,jdbcType=VARCHAR},
+      obal = #{obal,jdbcType=VARCHAR},
+      affb = #{affb,jdbcType=VARCHAR},
+      unaf = #{unaf,jdbcType=VARCHAR}
+    where b2_usecu_id = #{b2UsecuId,jdbcType=VARCHAR}
+  </update>
+</mapper>

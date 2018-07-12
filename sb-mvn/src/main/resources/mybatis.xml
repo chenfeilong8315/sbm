@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<properties resource="jdbc.properties" />
+
+	<typeAliases>
+		<package name="com.importdata.pojo" />
+	</typeAliases>
+
+	<environments default="myDeleloper">
+
+		<environment id="myDeleloper">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${jdbc.driver}" />
+				<property name="url" value="${jdbc.url}" />
+				<property name="username" value="${jdbc.username}" />
+				<property name="password" value="${jdbc.password}" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+<!-- 		<package name="com.importdata.mapper" /> -->
+			<mapper resource="mapper/VActionDetailMapper.xml"/>
+			<mapper resource="mapper/VActionOptionE1aMapper.xml"/>
+			<mapper resource="mapper/VActionOptionE1Mapper.xml"/>
+			<mapper resource="mapper/VActionOptionE2Mapper.xml"/>
+			<mapper resource="mapper/VActionOptionMapper.xml"/>
+			<mapper resource="mapper/VAddInfoMapper.xml"/>
+			<mapper resource="mapper/VGenInfoA1Mapper.xml"/>
+			<mapper resource="mapper/VGenInfoMapper.xml"/>
+			<mapper resource="mapper/VIntermSecMapper.xml"/>
+			<mapper resource="mapper/VUnderlyingSecB1Mapper.xml"/>
+			<mapper resource="mapper/VUnderlyingSecB2Mapper.xml"/>
+			<mapper resource="mapper/VUnderlyingSecMapper.xml"/>
+			
+	</mappers>
+
+</configuration>
+
+

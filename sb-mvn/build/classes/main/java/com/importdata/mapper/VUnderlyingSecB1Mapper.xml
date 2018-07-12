@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.importdata.mapper.VUnderlyingSecB1Mapper" >
+  <resultMap id="BaseResultMap" type="com.importdata.pojo.VUnderlyingSecB1" >
+    <id column="b1_usecu_id" property="b1UsecuId" jdbcType="VARCHAR" />
+    <result column="usecu_id" property="usecuId" jdbcType="VARCHAR" />
+    <result column="plis" property="plis" jdbcType="VARCHAR" />
+    <result column="mico" property="mico" jdbcType="VARCHAR" />
+    <result column="clas" property="clas" jdbcType="VARCHAR" />
+    <result column="opst" property="opst" jdbcType="VARCHAR" />
+    <result column="deno" property="deno" jdbcType="VARCHAR" />
+    <result column="coup" property="coup" jdbcType="VARCHAR" />
+    <result column="expi" property="expi" jdbcType="VARCHAR" />
+    <result column="frnr" property="frnr" jdbcType="VARCHAR" />
+    <result column="matu" property="matu" jdbcType="VARCHAR" />
+    <result column="issu" property="issu" jdbcType="VARCHAR" />
+    <result column="cald" property="cald" jdbcType="VARCHAR" />
+    <result column="putt" property="putt" jdbcType="VARCHAR" />
+    <result column="ddte" property="ddte" jdbcType="VARCHAR" />
+    <result column="conv" property="conv" jdbcType="VARCHAR" />
+    <result column="prfc" property="prfc" jdbcType="VARCHAR" />
+    <result column="nwfc" property="nwfc" jdbcType="VARCHAR" />
+    <result column="intr" property="intr" jdbcType="VARCHAR" />
+    <result column="nxrt" property="nxrt" jdbcType="VARCHAR" />
+    <result column="decl" property="decl" jdbcType="VARCHAR" />
+    <result column="wapa" property="wapa" jdbcType="VARCHAR" />
+    <result column="mino" property="mino" jdbcType="VARCHAR" />
+    <result column="f36_size" property="f36Size" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    b1_usecu_id, usecu_id, plis, mico, clas, opst, deno, coup, expi, frnr, matu, issu, 
+    cald, putt, ddte, conv, prfc, nwfc, intr, nxrt, decl, wapa, mino, f36_size
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from v_underlying_sec_b1
+    where b1_usecu_id = #{b1UsecuId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from v_underlying_sec_b1
+    where b1_usecu_id = #{b1UsecuId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.importdata.pojo.VUnderlyingSecB1" >
+    insert into v_underlying_sec_b1 (b1_usecu_id, usecu_id, plis, 
+      mico, clas, opst, deno, 
+      coup, expi, frnr, matu, 
+      issu, cald, putt, ddte, 
+      conv, prfc, nwfc, intr, 
+      nxrt, decl, wapa, mino, 
+      f36_size)
+    values (#{b1UsecuId,jdbcType=VARCHAR}, #{usecuId,jdbcType=VARCHAR}, #{plis,jdbcType=VARCHAR}, 
+      #{mico,jdbcType=VARCHAR}, #{clas,jdbcType=VARCHAR}, #{opst,jdbcType=VARCHAR}, #{deno,jdbcType=VARCHAR}, 
+      #{coup,jdbcType=VARCHAR}, #{expi,jdbcType=VARCHAR}, #{frnr,jdbcType=VARCHAR}, #{matu,jdbcType=VARCHAR}, 
+      #{issu,jdbcType=VARCHAR}, #{cald,jdbcType=VARCHAR}, #{putt,jdbcType=VARCHAR}, #{ddte,jdbcType=VARCHAR}, 
+      #{conv,jdbcType=VARCHAR}, #{prfc,jdbcType=VARCHAR}, #{nwfc,jdbcType=VARCHAR}, #{intr,jdbcType=VARCHAR}, 
+      #{nxrt,jdbcType=VARCHAR}, #{decl,jdbcType=VARCHAR}, #{wapa,jdbcType=VARCHAR}, #{mino,jdbcType=VARCHAR}, 
+      #{f36Size,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.importdata.pojo.VUnderlyingSecB1" >
+    insert into v_underlying_sec_b1
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="b1UsecuId != null" >
+        b1_usecu_id,
+      </if>
+      <if test="usecuId != null" >
+        usecu_id,
+      </if>
+      <if test="plis != null" >
+        plis,
+      </if>
+      <if test="mico != null" >
+        mico,
+      </if>
+      <if test="clas != null" >
+        clas,
+      </if>
+      <if test="opst != null" >
+        opst,
+      </if>
+      <if test="deno != null" >
+        deno,
+      </if>
+      <if test="coup != null" >
+        coup,
+      </if>
+      <if test="expi != null" >
+        expi,
+      </if>
+      <if test="frnr != null" >
+        frnr,
+      </if>
+      <if test="matu != null" >
+        matu,
+      </if>
+      <if test="issu != null" >
+        issu,
+      </if>
+      <if test="cald != null" >
+        cald,
+      </if>
+      <if test="putt != null" >
+        putt,
+      </if>
+      <if test="ddte != null" >
+        ddte,
+      </if>
+      <if test="conv != null" >
+        conv,
+      </if>
+      <if test="prfc != null" >
+        prfc,
+      </if>
+      <if test="nwfc != null" >
+        nwfc,
+      </if>
+      <if test="intr != null" >
+        intr,
+      </if>
+      <if test="nxrt != null" >
+        nxrt,
+      </if>
+      <if test="decl != null" >
+        decl,
+      </if>
+      <if test="wapa != null" >
+        wapa,
+      </if>
+      <if test="mino != null" >
+        mino,
+      </if>
+      <if test="f36Size != null" >
+        f36_size,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="b1UsecuId != null" >
+        #{b1UsecuId,jdbcType=VARCHAR},
+      </if>
+      <if test="usecuId != null" >
+        #{usecuId,jdbcType=VARCHAR},
+      </if>
+      <if test="plis != null" >
+        #{plis,jdbcType=VARCHAR},
+      </if>
+      <if test="mico != null" >
+        #{mico,jdbcType=VARCHAR},
+      </if>
+      <if test="clas != null" >
+        #{clas,jdbcType=VARCHAR},
+      </if>
+      <if test="opst != null" >
+        #{opst,jdbcType=VARCHAR},
+      </if>
+      <if test="deno != null" >
+        #{deno,jdbcType=VARCHAR},
+      </if>
+      <if test="coup != null" >
+        #{coup,jdbcType=VARCHAR},
+      </if>
+      <if test="expi != null" >
+        #{expi,jdbcType=VARCHAR},
+      </if>
+      <if test="frnr != null" >
+        #{frnr,jdbcType=VARCHAR},
+      </if>
+      <if test="matu != null" >
+        #{matu,jdbcType=VARCHAR},
+      </if>
+      <if test="issu != null" >
+        #{issu,jdbcType=VARCHAR},
+      </if>
+      <if test="cald != null" >
+        #{cald,jdbcType=VARCHAR},
+      </if>
+      <if test="putt != null" >
+        #{putt,jdbcType=VARCHAR},
+      </if>
+      <if test="ddte != null" >
+        #{ddte,jdbcType=VARCHAR},
+      </if>
+      <if test="conv != null" >
+        #{conv,jdbcType=VARCHAR},
+      </if>
+      <if test="prfc != null" >
+        #{prfc,jdbcType=VARCHAR},
+      </if>
+      <if test="nwfc != null" >
+        #{nwfc,jdbcType=VARCHAR},
+      </if>
+      <if test="intr != null" >
+        #{intr,jdbcType=VARCHAR},
+      </if>
+      <if test="nxrt != null" >
+        #{nxrt,jdbcType=VARCHAR},
+      </if>
+      <if test="decl != null" >
+        #{decl,jdbcType=VARCHAR},
+      </if>
+      <if test="wapa != null" >
+        #{wapa,jdbcType=VARCHAR},
+      </if>
+      <if test="mino != null" >
+        #{mino,jdbcType=VARCHAR},
+      </if>
+      <if test="f36Size != null" >
+        #{f36Size,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.importdata.pojo.VUnderlyingSecB1" >
+    update v_underlying_sec_b1
+    <set >
+      <if test="usecuId != null" >
+        usecu_id = #{usecuId,jdbcType=VARCHAR},
+      </if>
+      <if test="plis != null" >
+        plis = #{plis,jdbcType=VARCHAR},
+      </if>
+      <if test="mico != null" >
+        mico = #{mico,jdbcType=VARCHAR},
+      </if>
+      <if test="clas != null" >
+        clas = #{clas,jdbcType=VARCHAR},
+      </if>
+      <if test="opst != null" >
+        opst = #{opst,jdbcType=VARCHAR},
+      </if>
+      <if test="deno != null" >
+        deno = #{deno,jdbcType=VARCHAR},
+      </if>
+      <if test="coup != null" >
+        coup = #{coup,jdbcType=VARCHAR},
+      </if>
+      <if test="expi != null" >
+        expi = #{expi,jdbcType=VARCHAR},
+      </if>
+      <if test="frnr != null" >
+        frnr = #{frnr,jdbcType=VARCHAR},
+      </if>
+      <if test="matu != null" >
+        matu = #{matu,jdbcType=VARCHAR},
+      </if>
+      <if test="issu != null" >
+        issu = #{issu,jdbcType=VARCHAR},
+      </if>
+      <if test="cald != null" >
+        cald = #{cald,jdbcType=VARCHAR},
+      </if>
+      <if test="putt != null" >
+        putt = #{putt,jdbcType=VARCHAR},
+      </if>
+      <if test="ddte != null" >
+        ddte = #{ddte,jdbcType=VARCHAR},
+      </if>
+      <if test="conv != null" >
+        conv = #{conv,jdbcType=VARCHAR},
+      </if>
+      <if test="prfc != null" >
+        prfc = #{prfc,jdbcType=VARCHAR},
+      </if>
+      <if test="nwfc != null" >
+        nwfc = #{nwfc,jdbcType=VARCHAR},
+      </if>
+      <if test="intr != null" >
+        intr = #{intr,jdbcType=VARCHAR},
+      </if>
+      <if test="nxrt != null" >
+        nxrt = #{nxrt,jdbcType=VARCHAR},
+      </if>
+      <if test="decl != null" >
+        decl = #{decl,jdbcType=VARCHAR},
+      </if>
+      <if test="wapa != null" >
+        wapa = #{wapa,jdbcType=VARCHAR},
+      </if>
+      <if test="mino != null" >
+        mino = #{mino,jdbcType=VARCHAR},
+      </if>
+      <if test="f36Size != null" >
+        f36_size = #{f36Size,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where b1_usecu_id = #{b1UsecuId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.importdata.pojo.VUnderlyingSecB1" >
+    update v_underlying_sec_b1
+    set usecu_id = #{usecuId,jdbcType=VARCHAR},
+      plis = #{plis,jdbcType=VARCHAR},
+      mico = #{mico,jdbcType=VARCHAR},
+      clas = #{clas,jdbcType=VARCHAR},
+      opst = #{opst,jdbcType=VARCHAR},
+      deno = #{deno,jdbcType=VARCHAR},
+      coup = #{coup,jdbcType=VARCHAR},
+      expi = #{expi,jdbcType=VARCHAR},
+      frnr = #{frnr,jdbcType=VARCHAR},
+      matu = #{matu,jdbcType=VARCHAR},
+      issu = #{issu,jdbcType=VARCHAR},
+      cald = #{cald,jdbcType=VARCHAR},
+      putt = #{putt,jdbcType=VARCHAR},
+      ddte = #{ddte,jdbcType=VARCHAR},
+      conv = #{conv,jdbcType=VARCHAR},
+      prfc = #{prfc,jdbcType=VARCHAR},
+      nwfc = #{nwfc,jdbcType=VARCHAR},
+      intr = #{intr,jdbcType=VARCHAR},
+      nxrt = #{nxrt,jdbcType=VARCHAR},
+      decl = #{decl,jdbcType=VARCHAR},
+      wapa = #{wapa,jdbcType=VARCHAR},
+      mino = #{mino,jdbcType=VARCHAR},
+      f36_size = #{f36Size,jdbcType=VARCHAR}
+    where b1_usecu_id = #{b1UsecuId,jdbcType=VARCHAR}
+  </update>
+</mapper>

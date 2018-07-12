@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.importdata.mapper.VUnderlyingSecMapper" >
+  <resultMap id="BaseResultMap" type="com.importdata.pojo.VUnderlyingSec" >
+    <id column="usecu_id" property="usecuId" jdbcType="VARCHAR" />
+    <result column="info_id" property="infoId" jdbcType="VARCHAR" />
+    <result column="iden_sec" property="idenSec" jdbcType="VARCHAR" />
+    <result column="isin_nm" property="isinNm" jdbcType="VARCHAR" />
+    <result column="common_code_nm" property="commonCodeNm" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    usecu_id, info_id, iden_sec, isin_nm, common_code_nm
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from v_underlying_sec
+    where usecu_id = #{usecuId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from v_underlying_sec
+    where usecu_id = #{usecuId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.importdata.pojo.VUnderlyingSec" >
+    insert into v_underlying_sec (usecu_id, info_id, iden_sec, 
+      isin_nm, common_code_nm)
+    values (#{usecuId,jdbcType=VARCHAR}, #{infoId,jdbcType=VARCHAR}, #{idenSec,jdbcType=VARCHAR}, 
+      #{isinNm,jdbcType=VARCHAR}, #{commonCodeNm,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.importdata.pojo.VUnderlyingSec" >
+    insert into v_underlying_sec
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="usecuId != null" >
+        usecu_id,
+      </if>
+      <if test="infoId != null" >
+        info_id,
+      </if>
+      <if test="idenSec != null" >
+        iden_sec,
+      </if>
+      <if test="isinNm != null" >
+        isin_nm,
+      </if>
+      <if test="commonCodeNm != null" >
+        common_code_nm,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="usecuId != null" >
+        #{usecuId,jdbcType=VARCHAR},
+      </if>
+      <if test="infoId != null" >
+        #{infoId,jdbcType=VARCHAR},
+      </if>
+      <if test="idenSec != null" >
+        #{idenSec,jdbcType=VARCHAR},
+      </if>
+      <if test="isinNm != null" >
+        #{isinNm,jdbcType=VARCHAR},
+      </if>
+      <if test="commonCodeNm != null" >
+        #{commonCodeNm,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.importdata.pojo.VUnderlyingSec" >
+    update v_underlying_sec
+    <set >
+      <if test="infoId != null" >
+        info_id = #{infoId,jdbcType=VARCHAR},
+      </if>
+      <if test="idenSec != null" >
+        iden_sec = #{idenSec,jdbcType=VARCHAR},
+      </if>
+      <if test="isinNm != null" >
+        isin_nm = #{isinNm,jdbcType=VARCHAR},
+      </if>
+      <if test="commonCodeNm != null" >
+        common_code_nm = #{commonCodeNm,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where usecu_id = #{usecuId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.importdata.pojo.VUnderlyingSec" >
+    update v_underlying_sec
+    set info_id = #{infoId,jdbcType=VARCHAR},
+      iden_sec = #{idenSec,jdbcType=VARCHAR},
+      isin_nm = #{isinNm,jdbcType=VARCHAR},
+      common_code_nm = #{commonCodeNm,jdbcType=VARCHAR}
+    where usecu_id = #{usecuId,jdbcType=VARCHAR}
+  </update>
+</mapper>

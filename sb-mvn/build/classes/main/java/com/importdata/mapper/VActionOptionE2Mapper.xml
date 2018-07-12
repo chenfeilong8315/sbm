@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.importdata.mapper.VActionOptionE2Mapper" >
+  <resultMap id="BaseResultMap" type="com.importdata.pojo.VActionOptionE2" >
+    <id column="e2_caoptn_id" property="e2CaoptnId" jdbcType="VARCHAR" />
+    <result column="caoptn_id" property="caoptnId" jdbcType="VARCHAR" />
+    <result column="crdb" property="crdb" jdbcType="VARCHAR" />
+    <result column="cont" property="cont" jdbcType="VARCHAR" />
+    <result column="nelp" property="nelp" jdbcType="VARCHAR" />
+    <result column="ityp" property="ityp" jdbcType="VARCHAR" />
+    <result column="txap" property="txap" jdbcType="VARCHAR" />
+    <result column="etyp" property="etyp" jdbcType="VARCHAR" />
+    <result column="coin" property="coin" jdbcType="VARCHAR" />
+    <result column="cash" property="cash" jdbcType="VARCHAR" />
+    <result column="entl" property="entl" jdbcType="VARCHAR" />
+    <result column="resu" property="resu" jdbcType="VARCHAR" />
+    <result column="ocmt" property="ocmt" jdbcType="VARCHAR" />
+    <result column="capg" property="capg" jdbcType="VARCHAR" />
+    <result column="indm" property="indm" jdbcType="VARCHAR" />
+    <result column="cinl" property="cinl" jdbcType="VARCHAR" />
+    <result column="f19_char" property="f19Char" jdbcType="VARCHAR" />
+    <result column="f19_flfr" property="f19Flfr" jdbcType="VARCHAR" />
+    <result column="unfr" property="unfr" jdbcType="VARCHAR" />
+    <result column="txfr" property="txfr" jdbcType="VARCHAR" />
+    <result column="txdf" property="txdf" jdbcType="VARCHAR" />
+    <result column="soic" property="soic" jdbcType="VARCHAR" />
+    <result column="f19_grss" property="f19Grss" jdbcType="VARCHAR" />
+    <result column="intr" property="intr" jdbcType="VARCHAR" />
+    <result column="mktc" property="mktc" jdbcType="VARCHAR" />
+    <result column="f19_nett" property="f19Nett" jdbcType="VARCHAR" />
+    <result column="prin" property="prin" jdbcType="VARCHAR" />
+    <result column="rein" property="rein" jdbcType="VARCHAR" />
+    <result column="f19_taxc" property="f19Taxc" jdbcType="VARCHAR" />
+    <result column="f19_taxr" property="f19Taxr" jdbcType="VARCHAR" />
+    <result column="f19_witl" property="f19Witl" jdbcType="VARCHAR" />
+    <result column="redp" property="redp" jdbcType="VARCHAR" />
+    <result column="f19_atax" property="f19Atax" jdbcType="VARCHAR" />
+    <result column="inco" property="inco" jdbcType="VARCHAR" />
+    <result column="f19_exec" property="f19Exec" jdbcType="VARCHAR" />
+    <result column="loco" property="loco" jdbcType="VARCHAR" />
+    <result column="pamm" property="pamm" jdbcType="VARCHAR" />
+    <result column="regf" property="regf" jdbcType="VARCHAR" />
+    <result column="ship" property="ship" jdbcType="VARCHAR" />
+    <result column="f19_sofe" property="f19Sofe" jdbcType="VARCHAR" />
+    <result column="stam" property="stam" jdbcType="VARCHAR" />
+    <result column="stex" property="stex" jdbcType="VARCHAR" />
+    <result column="vata" property="vata" jdbcType="VARCHAR" />
+    <result column="f19_fisc" property="f19Fisc" jdbcType="VARCHAR" />
+    <result column="mfdv" property="mfdv" jdbcType="VARCHAR" />
+    <result column="f19_txrc" property="f19Txrc" jdbcType="VARCHAR" />
+    <result column="eutr" property="eutr" jdbcType="VARCHAR" />
+    <result column="acru" property="acru" jdbcType="VARCHAR" />
+    <result column="f19_equl" property="f19Equl" jdbcType="VARCHAR" />
+    <result column="ftca" property="ftca" jdbcType="VARCHAR" />
+    <result column="nrat" property="nrat" jdbcType="VARCHAR" />
+    <result column="bwit" property="bwit" jdbcType="VARCHAR" />
+    <result column="f19_txin" property="f19Txin" jdbcType="VARCHAR" />
+    <result column="trax" property="trax" jdbcType="VARCHAR" />
+    <result column="payd" property="payd" jdbcType="VARCHAR" />
+    <result column="valu" property="valu" jdbcType="VARCHAR" />
+    <result column="earl" property="earl" jdbcType="VARCHAR" />
+    <result column="fxdt" property="fxdt" jdbcType="VARCHAR" />
+    <result column="f92_atax" property="f92Atax" jdbcType="VARCHAR" />
+    <result column="f92_char" property="f92Char" jdbcType="VARCHAR" />
+    <result column="f92_equl" property="f92Equl" jdbcType="VARCHAR" />
+    <result column="esof" property="esof" jdbcType="VARCHAR" />
+    <result column="f92_flfr" property="f92Flfr" jdbcType="VARCHAR" />
+    <result column="f92_fisc" property="f92Fisc" jdbcType="VARCHAR" />
+    <result column="f92_grss" property="f92Grss" jdbcType="VARCHAR" />
+    <result column="exch" property="exch" jdbcType="VARCHAR" />
+    <result column="ince" property="ince" jdbcType="VARCHAR" />
+    <result column="intp" property="intp" jdbcType="VARCHAR" />
+    <result column="f92_nett" property="f92Nett" jdbcType="VARCHAR" />
+    <result column="nres" property="nres" jdbcType="VARCHAR" />
+    <result column="rate" property="rate" jdbcType="VARCHAR" />
+    <result column="f92_sofe" property="f92Sofe" jdbcType="VARCHAR" />
+    <result column="f92_taxc" property="f92Taxc" jdbcType="VARCHAR" />
+    <result column="f92_taxr" property="f92Taxr" jdbcType="VARCHAR" />
+    <result column="f92_txin" property="f92Txin" jdbcType="VARCHAR" />
+    <result column="txpr" property="txpr" jdbcType="VARCHAR" />
+    <result column="f92_txrc" property="f92Txrc" jdbcType="VARCHAR" />
+    <result column="f92_witl" property="f92Witl" jdbcType="VARCHAR" />
+    <result column="offr" property="offr" jdbcType="VARCHAR" />
+    <result column="prpp" property="prpp" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    e2_caoptn_id, caoptn_id, crdb, cont, nelp, ityp, txap, etyp, coin, cash, entl, resu, 
+    ocmt, capg, indm, cinl, f19_char, f19_flfr, unfr, txfr, txdf, soic, f19_grss, intr, 
+    mktc, f19_nett, prin, rein, f19_taxc, f19_taxr, f19_witl, redp, f19_atax, inco, f19_exec, 
+    loco, pamm, regf, ship, f19_sofe, stam, stex, vata, f19_fisc, mfdv, f19_txrc, eutr, 
+    acru, f19_equl, ftca, nrat, bwit, f19_txin, trax, payd, valu, earl, fxdt, f92_atax, 
+    f92_char, f92_equl, esof, f92_flfr, f92_fisc, f92_grss, exch, ince, intp, f92_nett, 
+    nres, rate, f92_sofe, f92_taxc, f92_taxr, f92_txin, txpr, f92_txrc, f92_witl, offr, 
+    prpp
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from v_action_option_e2
+    where e2_caoptn_id = #{e2CaoptnId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from v_action_option_e2
+    where e2_caoptn_id = #{e2CaoptnId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.importdata.pojo.VActionOptionE2" >
+    insert into v_action_option_e2 (e2_caoptn_id, caoptn_id, crdb, 
+      cont, nelp, ityp, txap, 
+      etyp, coin, cash, entl, 
+      resu, ocmt, capg, indm, 
+      cinl, f19_char, f19_flfr, 
+      unfr, txfr, txdf, soic, 
+      f19_grss, intr, mktc, 
+      f19_nett, prin, rein, 
+      f19_taxc, f19_taxr, f19_witl, 
+      redp, f19_atax, inco, 
+      f19_exec, loco, pamm, 
+      regf, ship, f19_sofe, 
+      stam, stex, vata, f19_fisc, 
+      mfdv, f19_txrc, eutr, 
+      acru, f19_equl, ftca, 
+      nrat, bwit, f19_txin, 
+      trax, payd, valu, earl, 
+      fxdt, f92_atax, f92_char, 
+      f92_equl, esof, f92_flfr, 
+      f92_fisc, f92_grss, exch, 
+      ince, intp, f92_nett, 
+      nres, rate, f92_sofe, 
+      f92_taxc, f92_taxr, f92_txin, 
+      txpr, f92_txrc, f92_witl, 
+      offr, prpp)
+    values (#{e2CaoptnId,jdbcType=VARCHAR}, #{caoptnId,jdbcType=VARCHAR}, #{crdb,jdbcType=VARCHAR}, 
+      #{cont,jdbcType=VARCHAR}, #{nelp,jdbcType=VARCHAR}, #{ityp,jdbcType=VARCHAR}, #{txap,jdbcType=VARCHAR}, 
+      #{etyp,jdbcType=VARCHAR}, #{coin,jdbcType=VARCHAR}, #{cash,jdbcType=VARCHAR}, #{entl,jdbcType=VARCHAR}, 
+      #{resu,jdbcType=VARCHAR}, #{ocmt,jdbcType=VARCHAR}, #{capg,jdbcType=VARCHAR}, #{indm,jdbcType=VARCHAR}, 
+      #{cinl,jdbcType=VARCHAR}, #{f19Char,jdbcType=VARCHAR}, #{f19Flfr,jdbcType=VARCHAR}, 
+      #{unfr,jdbcType=VARCHAR}, #{txfr,jdbcType=VARCHAR}, #{txdf,jdbcType=VARCHAR}, #{soic,jdbcType=VARCHAR}, 
+      #{f19Grss,jdbcType=VARCHAR}, #{intr,jdbcType=VARCHAR}, #{mktc,jdbcType=VARCHAR}, 
+      #{f19Nett,jdbcType=VARCHAR}, #{prin,jdbcType=VARCHAR}, #{rein,jdbcType=VARCHAR}, 
+      #{f19Taxc,jdbcType=VARCHAR}, #{f19Taxr,jdbcType=VARCHAR}, #{f19Witl,jdbcType=VARCHAR}, 
+      #{redp,jdbcType=VARCHAR}, #{f19Atax,jdbcType=VARCHAR}, #{inco,jdbcType=VARCHAR}, 
+      #{f19Exec,jdbcType=VARCHAR}, #{loco,jdbcType=VARCHAR}, #{pamm,jdbcType=VARCHAR}, 
+      #{regf,jdbcType=VARCHAR}, #{ship,jdbcType=VARCHAR}, #{f19Sofe,jdbcType=VARCHAR}, 
+      #{stam,jdbcType=VARCHAR}, #{stex,jdbcType=VARCHAR}, #{vata,jdbcType=VARCHAR}, #{f19Fisc,jdbcType=VARCHAR}, 
+      #{mfdv,jdbcType=VARCHAR}, #{f19Txrc,jdbcType=VARCHAR}, #{eutr,jdbcType=VARCHAR}, 
+      #{acru,jdbcType=VARCHAR}, #{f19Equl,jdbcType=VARCHAR}, #{ftca,jdbcType=VARCHAR}, 
+      #{nrat,jdbcType=VARCHAR}, #{bwit,jdbcType=VARCHAR}, #{f19Txin,jdbcType=VARCHAR}, 
+      #{trax,jdbcType=VARCHAR}, #{payd,jdbcType=VARCHAR}, #{valu,jdbcType=VARCHAR}, #{earl,jdbcType=VARCHAR}, 
+      #{fxdt,jdbcType=VARCHAR}, #{f92Atax,jdbcType=VARCHAR}, #{f92Char,jdbcType=VARCHAR}, 
+      #{f92Equl,jdbcType=VARCHAR}, #{esof,jdbcType=VARCHAR}, #{f92Flfr,jdbcType=VARCHAR}, 
+      #{f92Fisc,jdbcType=VARCHAR}, #{f92Grss,jdbcType=VARCHAR}, #{exch,jdbcType=VARCHAR}, 
+      #{ince,jdbcType=VARCHAR}, #{intp,jdbcType=VARCHAR}, #{f92Nett,jdbcType=VARCHAR}, 
+      #{nres,jdbcType=VARCHAR}, #{rate,jdbcType=VARCHAR}, #{f92Sofe,jdbcType=VARCHAR}, 
+      #{f92Taxc,jdbcType=VARCHAR}, #{f92Taxr,jdbcType=VARCHAR}, #{f92Txin,jdbcType=VARCHAR}, 
+      #{txpr,jdbcType=VARCHAR}, #{f92Txrc,jdbcType=VARCHAR}, #{f92Witl,jdbcType=VARCHAR}, 
+      #{offr,jdbcType=VARCHAR}, #{prpp,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.importdata.pojo.VActionOptionE2" >
+    insert into v_action_option_e2
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="e2CaoptnId != null" >
+        e2_caoptn_id,
+      </if>
+      <if test="caoptnId != null" >
+        caoptn_id,
+      </if>
+      <if test="crdb != null" >
+        crdb,
+      </if>
+      <if test="cont != null" >
+        cont,
+      </if>
+      <if test="nelp != null" >
+        nelp,
+      </if>
+      <if test="ityp != null" >
+        ityp,
+      </if>
+      <if test="txap != null" >
+        txap,
+      </if>
+      <if test="etyp != null" >
+        etyp,
+      </if>
+      <if test="coin != null" >
+        coin,
+      </if>
+      <if test="cash != null" >
+        cash,
+      </if>
+      <if test="entl != null" >
+        entl,
+      </if>
+      <if test="resu != null" >
+        resu,
+      </if>
+      <if test="ocmt != null" >
+        ocmt,
+      </if>
+      <if test="capg != null" >
+        capg,
+      </if>
+      <if test="indm != null" >
+        indm,
+      </if>
+      <if test="cinl != null" >
+        cinl,
+      </if>
+      <if test="f19Char != null" >
+        f19_char,
+      </if>
+      <if test="f19Flfr != null" >
+        f19_flfr,
+      </if>
+      <if test="unfr != null" >
+        unfr,
+      </if>
+      <if test="txfr != null" >
+        txfr,
+      </if>
+      <if test="txdf != null" >
+        txdf,
+      </if>
+      <if test="soic != null" >
+        soic,
+      </if>
+      <if test="f19Grss != null" >
+        f19_grss,
+      </if>
+      <if test="intr != null" >
+        intr,
+      </if>
+      <if test="mktc != null" >
+        mktc,
+      </if>
+      <if test="f19Nett != null" >
+        f19_nett,
+      </if>
+      <if test="prin != null" >
+        prin,
+      </if>
+      <if test="rein != null" >
+        rein,
+      </if>
+      <if test="f19Taxc != null" >
+        f19_taxc,
+      </if>
+      <if test="f19Taxr != null" >
+        f19_taxr,
+      </if>
+      <if test="f19Witl != null" >
+        f19_witl,
+      </if>
+      <if test="redp != null" >
+        redp,
+      </if>
+      <if test="f19Atax != null" >
+        f19_atax,
+      </if>
+      <if test="inco != null" >
+        inco,
+      </if>
+      <if test="f19Exec != null" >
+        f19_exec,
+      </if>
+      <if test="loco != null" >
+        loco,
+      </if>
+      <if test="pamm != null" >
+        pamm,
+      </if>
+      <if test="regf != null" >
+        regf,
+      </if>
+      <if test="ship != null" >
+        ship,
+      </if>
+      <if test="f19Sofe != null" >
+        f19_sofe,
+      </if>
+      <if test="stam != null" >
+        stam,
+      </if>
+      <if test="stex != null" >
+        stex,
+      </if>
+      <if test="vata != null" >
+        vata,
+      </if>
+      <if test="f19Fisc != null" >
+        f19_fisc,
+      </if>
+      <if test="mfdv != null" >
+        mfdv,
+      </if>
+      <if test="f19Txrc != null" >
+        f19_txrc,
+      </if>
+      <if test="eutr != null" >
+        eutr,
+      </if>
+      <if test="acru != null" >
+        acru,
+      </if>
+      <if test="f19Equl != null" >
+        f19_equl,
+      </if>
+      <if test="ftca != null" >
+        ftca,
+      </if>
+      <if test="nrat != null" >
+        nrat,
+      </if>
+      <if test="bwit != null" >
+        bwit,
+      </if>
+      <if test="f19Txin != null" >
+        f19_txin,
+      </if>
+      <if test="trax != null" >
+        trax,
+      </if>
+      <if test="payd != null" >
+        payd,
+      </if>
+      <if test="valu != null" >
+        valu,
+      </if>
+      <if test="earl != null" >
+        earl,
+      </if>
+      <if test="fxdt != null" >
+        fxdt,
+      </if>
+      <if test="f92Atax != null" >
+        f92_atax,
+      </if>
+      <if test="f92Char != null" >
+        f92_char,
+      </if>
+      <if test="f92Equl != null" >
+        f92_equl,
+      </if>
+      <if test="esof != null" >
+        esof,
+      </if>
+      <if test="f92Flfr != null" >
+        f92_flfr,
+      </if>
+      <if test="f92Fisc != null" >
+        f92_fisc,
+      </if>
+      <if test="f92Grss != null" >
+        f92_grss,
+      </if>
+      <if test="exch != null" >
+        exch,
+      </if>
+      <if test="ince != null" >
+        ince,
+      </if>
+      <if test="intp != null" >
+        intp,
+      </if>
+      <if test="f92Nett != null" >
+        f92_nett,
+      </if>
+      <if test="nres != null" >
+        nres,
+      </if>
+      <if test="rate != null" >
+        rate,
+      </if>
+      <if test="f92Sofe != null" >
+        f92_sofe,
+      </if>
+      <if test="f92Taxc != null" >
+        f92_taxc,
+      </if>
+      <if test="f92Taxr != null" >
+        f92_taxr,
+      </if>
+      <if test="f92Txin != null" >
+        f92_txin,
+      </if>
+      <if test="txpr != null" >
+        txpr,
+      </if>
+      <if test="f92Txrc != null" >
+        f92_txrc,
+      </if>
+      <if test="f92Witl != null" >
+        f92_witl,
+      </if>
+      <if test="offr != null" >
+        offr,
+      </if>
+      <if test="prpp != null" >
+        prpp,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="e2CaoptnId != null" >
+        #{e2CaoptnId,jdbcType=VARCHAR},
+      </if>
+      <if test="caoptnId != null" >
+        #{caoptnId,jdbcType=VARCHAR},
+      </if>
+      <if test="crdb != null" >
+        #{crdb,jdbcType=VARCHAR},
+      </if>
+      <if test="cont != null" >
+        #{cont,jdbcType=VARCHAR},
+      </if>
+      <if test="nelp != null" >
+        #{nelp,jdbcType=VARCHAR},
+      </if>
+      <if test="ityp != null" >
+        #{ityp,jdbcType=VARCHAR},
+      </if>
+      <if test="txap != null" >
+        #{txap,jdbcType=VARCHAR},
+      </if>
+      <if test="etyp != null" >
+        #{etyp,jdbcType=VARCHAR},
+      </if>
+      <if test="coin != null" >
+        #{coin,jdbcType=VARCHAR},
+      </if>
+      <if test="cash != null" >
+        #{cash,jdbcType=VARCHAR},
+      </if>
+      <if test="entl != null" >
+        #{entl,jdbcType=VARCHAR},
+      </if>
+      <if test="resu != null" >
+        #{resu,jdbcType=VARCHAR},
+      </if>
+      <if test="ocmt != null" >
+        #{ocmt,jdbcType=VARCHAR},
+      </if>
+      <if test="capg != null" >
+        #{capg,jdbcType=VARCHAR},
+      </if>
+      <if test="indm != null" >
+        #{indm,jdbcType=VARCHAR},
+      </if>
+      <if test="cinl != null" >
+        #{cinl,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Char != null" >
+        #{f19Char,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Flfr != null" >
+        #{f19Flfr,jdbcType=VARCHAR},
+      </if>
+      <if test="unfr != null" >
+        #{unfr,jdbcType=VARCHAR},
+      </if>
+      <if test="txfr != null" >
+        #{txfr,jdbcType=VARCHAR},
+      </if>
+      <if test="txdf != null" >
+        #{txdf,jdbcType=VARCHAR},
+      </if>
+      <if test="soic != null" >
+        #{soic,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Grss != null" >
+        #{f19Grss,jdbcType=VARCHAR},
+      </if>
+      <if test="intr != null" >
+        #{intr,jdbcType=VARCHAR},
+      </if>
+      <if test="mktc != null" >
+        #{mktc,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Nett != null" >
+        #{f19Nett,jdbcType=VARCHAR},
+      </if>
+      <if test="prin != null" >
+        #{prin,jdbcType=VARCHAR},
+      </if>
+      <if test="rein != null" >
+        #{rein,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Taxc != null" >
+        #{f19Taxc,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Taxr != null" >
+        #{f19Taxr,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Witl != null" >
+        #{f19Witl,jdbcType=VARCHAR},
+      </if>
+      <if test="redp != null" >
+        #{redp,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Atax != null" >
+        #{f19Atax,jdbcType=VARCHAR},
+      </if>
+      <if test="inco != null" >
+        #{inco,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Exec != null" >
+        #{f19Exec,jdbcType=VARCHAR},
+      </if>
+      <if test="loco != null" >
+        #{loco,jdbcType=VARCHAR},
+      </if>
+      <if test="pamm != null" >
+        #{pamm,jdbcType=VARCHAR},
+      </if>
+      <if test="regf != null" >
+        #{regf,jdbcType=VARCHAR},
+      </if>
+      <if test="ship != null" >
+        #{ship,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Sofe != null" >
+        #{f19Sofe,jdbcType=VARCHAR},
+      </if>
+      <if test="stam != null" >
+        #{stam,jdbcType=VARCHAR},
+      </if>
+      <if test="stex != null" >
+        #{stex,jdbcType=VARCHAR},
+      </if>
+      <if test="vata != null" >
+        #{vata,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Fisc != null" >
+        #{f19Fisc,jdbcType=VARCHAR},
+      </if>
+      <if test="mfdv != null" >
+        #{mfdv,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Txrc != null" >
+        #{f19Txrc,jdbcType=VARCHAR},
+      </if>
+      <if test="eutr != null" >
+        #{eutr,jdbcType=VARCHAR},
+      </if>
+      <if test="acru != null" >
+        #{acru,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Equl != null" >
+        #{f19Equl,jdbcType=VARCHAR},
+      </if>
+      <if test="ftca != null" >
+        #{ftca,jdbcType=VARCHAR},
+      </if>
+      <if test="nrat != null" >
+        #{nrat,jdbcType=VARCHAR},
+      </if>
+      <if test="bwit != null" >
+        #{bwit,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Txin != null" >
+        #{f19Txin,jdbcType=VARCHAR},
+      </if>
+      <if test="trax != null" >
+        #{trax,jdbcType=VARCHAR},
+      </if>
+      <if test="payd != null" >
+        #{payd,jdbcType=VARCHAR},
+      </if>
+      <if test="valu != null" >
+        #{valu,jdbcType=VARCHAR},
+      </if>
+      <if test="earl != null" >
+        #{earl,jdbcType=VARCHAR},
+      </if>
+      <if test="fxdt != null" >
+        #{fxdt,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Atax != null" >
+        #{f92Atax,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Char != null" >
+        #{f92Char,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Equl != null" >
+        #{f92Equl,jdbcType=VARCHAR},
+      </if>
+      <if test="esof != null" >
+        #{esof,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Flfr != null" >
+        #{f92Flfr,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Fisc != null" >
+        #{f92Fisc,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Grss != null" >
+        #{f92Grss,jdbcType=VARCHAR},
+      </if>
+      <if test="exch != null" >
+        #{exch,jdbcType=VARCHAR},
+      </if>
+      <if test="ince != null" >
+        #{ince,jdbcType=VARCHAR},
+      </if>
+      <if test="intp != null" >
+        #{intp,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Nett != null" >
+        #{f92Nett,jdbcType=VARCHAR},
+      </if>
+      <if test="nres != null" >
+        #{nres,jdbcType=VARCHAR},
+      </if>
+      <if test="rate != null" >
+        #{rate,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Sofe != null" >
+        #{f92Sofe,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Taxc != null" >
+        #{f92Taxc,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Taxr != null" >
+        #{f92Taxr,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Txin != null" >
+        #{f92Txin,jdbcType=VARCHAR},
+      </if>
+      <if test="txpr != null" >
+        #{txpr,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Txrc != null" >
+        #{f92Txrc,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Witl != null" >
+        #{f92Witl,jdbcType=VARCHAR},
+      </if>
+      <if test="offr != null" >
+        #{offr,jdbcType=VARCHAR},
+      </if>
+      <if test="prpp != null" >
+        #{prpp,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.importdata.pojo.VActionOptionE2" >
+    update v_action_option_e2
+    <set >
+      <if test="caoptnId != null" >
+        caoptn_id = #{caoptnId,jdbcType=VARCHAR},
+      </if>
+      <if test="crdb != null" >
+        crdb = #{crdb,jdbcType=VARCHAR},
+      </if>
+      <if test="cont != null" >
+        cont = #{cont,jdbcType=VARCHAR},
+      </if>
+      <if test="nelp != null" >
+        nelp = #{nelp,jdbcType=VARCHAR},
+      </if>
+      <if test="ityp != null" >
+        ityp = #{ityp,jdbcType=VARCHAR},
+      </if>
+      <if test="txap != null" >
+        txap = #{txap,jdbcType=VARCHAR},
+      </if>
+      <if test="etyp != null" >
+        etyp = #{etyp,jdbcType=VARCHAR},
+      </if>
+      <if test="coin != null" >
+        coin = #{coin,jdbcType=VARCHAR},
+      </if>
+      <if test="cash != null" >
+        cash = #{cash,jdbcType=VARCHAR},
+      </if>
+      <if test="entl != null" >
+        entl = #{entl,jdbcType=VARCHAR},
+      </if>
+      <if test="resu != null" >
+        resu = #{resu,jdbcType=VARCHAR},
+      </if>
+      <if test="ocmt != null" >
+        ocmt = #{ocmt,jdbcType=VARCHAR},
+      </if>
+      <if test="capg != null" >
+        capg = #{capg,jdbcType=VARCHAR},
+      </if>
+      <if test="indm != null" >
+        indm = #{indm,jdbcType=VARCHAR},
+      </if>
+      <if test="cinl != null" >
+        cinl = #{cinl,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Char != null" >
+        f19_char = #{f19Char,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Flfr != null" >
+        f19_flfr = #{f19Flfr,jdbcType=VARCHAR},
+      </if>
+      <if test="unfr != null" >
+        unfr = #{unfr,jdbcType=VARCHAR},
+      </if>
+      <if test="txfr != null" >
+        txfr = #{txfr,jdbcType=VARCHAR},
+      </if>
+      <if test="txdf != null" >
+        txdf = #{txdf,jdbcType=VARCHAR},
+      </if>
+      <if test="soic != null" >
+        soic = #{soic,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Grss != null" >
+        f19_grss = #{f19Grss,jdbcType=VARCHAR},
+      </if>
+      <if test="intr != null" >
+        intr = #{intr,jdbcType=VARCHAR},
+      </if>
+      <if test="mktc != null" >
+        mktc = #{mktc,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Nett != null" >
+        f19_nett = #{f19Nett,jdbcType=VARCHAR},
+      </if>
+      <if test="prin != null" >
+        prin = #{prin,jdbcType=VARCHAR},
+      </if>
+      <if test="rein != null" >
+        rein = #{rein,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Taxc != null" >
+        f19_taxc = #{f19Taxc,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Taxr != null" >
+        f19_taxr = #{f19Taxr,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Witl != null" >
+        f19_witl = #{f19Witl,jdbcType=VARCHAR},
+      </if>
+      <if test="redp != null" >
+        redp = #{redp,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Atax != null" >
+        f19_atax = #{f19Atax,jdbcType=VARCHAR},
+      </if>
+      <if test="inco != null" >
+        inco = #{inco,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Exec != null" >
+        f19_exec = #{f19Exec,jdbcType=VARCHAR},
+      </if>
+      <if test="loco != null" >
+        loco = #{loco,jdbcType=VARCHAR},
+      </if>
+      <if test="pamm != null" >
+        pamm = #{pamm,jdbcType=VARCHAR},
+      </if>
+      <if test="regf != null" >
+        regf = #{regf,jdbcType=VARCHAR},
+      </if>
+      <if test="ship != null" >
+        ship = #{ship,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Sofe != null" >
+        f19_sofe = #{f19Sofe,jdbcType=VARCHAR},
+      </if>
+      <if test="stam != null" >
+        stam = #{stam,jdbcType=VARCHAR},
+      </if>
+      <if test="stex != null" >
+        stex = #{stex,jdbcType=VARCHAR},
+      </if>
+      <if test="vata != null" >
+        vata = #{vata,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Fisc != null" >
+        f19_fisc = #{f19Fisc,jdbcType=VARCHAR},
+      </if>
+      <if test="mfdv != null" >
+        mfdv = #{mfdv,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Txrc != null" >
+        f19_txrc = #{f19Txrc,jdbcType=VARCHAR},
+      </if>
+      <if test="eutr != null" >
+        eutr = #{eutr,jdbcType=VARCHAR},
+      </if>
+      <if test="acru != null" >
+        acru = #{acru,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Equl != null" >
+        f19_equl = #{f19Equl,jdbcType=VARCHAR},
+      </if>
+      <if test="ftca != null" >
+        ftca = #{ftca,jdbcType=VARCHAR},
+      </if>
+      <if test="nrat != null" >
+        nrat = #{nrat,jdbcType=VARCHAR},
+      </if>
+      <if test="bwit != null" >
+        bwit = #{bwit,jdbcType=VARCHAR},
+      </if>
+      <if test="f19Txin != null" >
+        f19_txin = #{f19Txin,jdbcType=VARCHAR},
+      </if>
+      <if test="trax != null" >
+        trax = #{trax,jdbcType=VARCHAR},
+      </if>
+      <if test="payd != null" >
+        payd = #{payd,jdbcType=VARCHAR},
+      </if>
+      <if test="valu != null" >
+        valu = #{valu,jdbcType=VARCHAR},
+      </if>
+      <if test="earl != null" >
+        earl = #{earl,jdbcType=VARCHAR},
+      </if>
+      <if test="fxdt != null" >
+        fxdt = #{fxdt,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Atax != null" >
+        f92_atax = #{f92Atax,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Char != null" >
+        f92_char = #{f92Char,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Equl != null" >
+        f92_equl = #{f92Equl,jdbcType=VARCHAR},
+      </if>
+      <if test="esof != null" >
+        esof = #{esof,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Flfr != null" >
+        f92_flfr = #{f92Flfr,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Fisc != null" >
+        f92_fisc = #{f92Fisc,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Grss != null" >
+        f92_grss = #{f92Grss,jdbcType=VARCHAR},
+      </if>
+      <if test="exch != null" >
+        exch = #{exch,jdbcType=VARCHAR},
+      </if>
+      <if test="ince != null" >
+        ince = #{ince,jdbcType=VARCHAR},
+      </if>
+      <if test="intp != null" >
+        intp = #{intp,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Nett != null" >
+        f92_nett = #{f92Nett,jdbcType=VARCHAR},
+      </if>
+      <if test="nres != null" >
+        nres = #{nres,jdbcType=VARCHAR},
+      </if>
+      <if test="rate != null" >
+        rate = #{rate,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Sofe != null" >
+        f92_sofe = #{f92Sofe,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Taxc != null" >
+        f92_taxc = #{f92Taxc,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Taxr != null" >
+        f92_taxr = #{f92Taxr,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Txin != null" >
+        f92_txin = #{f92Txin,jdbcType=VARCHAR},
+      </if>
+      <if test="txpr != null" >
+        txpr = #{txpr,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Txrc != null" >
+        f92_txrc = #{f92Txrc,jdbcType=VARCHAR},
+      </if>
+      <if test="f92Witl != null" >
+        f92_witl = #{f92Witl,jdbcType=VARCHAR},
+      </if>
+      <if test="offr != null" >
+        offr = #{offr,jdbcType=VARCHAR},
+      </if>
+      <if test="prpp != null" >
+        prpp = #{prpp,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where e2_caoptn_id = #{e2CaoptnId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.importdata.pojo.VActionOptionE2" >
+    update v_action_option_e2
+    set caoptn_id = #{caoptnId,jdbcType=VARCHAR},
+      crdb = #{crdb,jdbcType=VARCHAR},
+      cont = #{cont,jdbcType=VARCHAR},
+      nelp = #{nelp,jdbcType=VARCHAR},
+      ityp = #{ityp,jdbcType=VARCHAR},
+      txap = #{txap,jdbcType=VARCHAR},
+      etyp = #{etyp,jdbcType=VARCHAR},
+      coin = #{coin,jdbcType=VARCHAR},
+      cash = #{cash,jdbcType=VARCHAR},
+      entl = #{entl,jdbcType=VARCHAR},
+      resu = #{resu,jdbcType=VARCHAR},
+      ocmt = #{ocmt,jdbcType=VARCHAR},
+      capg = #{capg,jdbcType=VARCHAR},
+      indm = #{indm,jdbcType=VARCHAR},
+      cinl = #{cinl,jdbcType=VARCHAR},
+      f19_char = #{f19Char,jdbcType=VARCHAR},
+      f19_flfr = #{f19Flfr,jdbcType=VARCHAR},
+      unfr = #{unfr,jdbcType=VARCHAR},
+      txfr = #{txfr,jdbcType=VARCHAR},
+      txdf = #{txdf,jdbcType=VARCHAR},
+      soic = #{soic,jdbcType=VARCHAR},
+      f19_grss = #{f19Grss,jdbcType=VARCHAR},
+      intr = #{intr,jdbcType=VARCHAR},
+      mktc = #{mktc,jdbcType=VARCHAR},
+      f19_nett = #{f19Nett,jdbcType=VARCHAR},
+      prin = #{prin,jdbcType=VARCHAR},
+      rein = #{rein,jdbcType=VARCHAR},
+      f19_taxc = #{f19Taxc,jdbcType=VARCHAR},
+      f19_taxr = #{f19Taxr,jdbcType=VARCHAR},
+      f19_witl = #{f19Witl,jdbcType=VARCHAR},
+      redp = #{redp,jdbcType=VARCHAR},
+      f19_atax = #{f19Atax,jdbcType=VARCHAR},
+      inco = #{inco,jdbcType=VARCHAR},
+      f19_exec = #{f19Exec,jdbcType=VARCHAR},
+      loco = #{loco,jdbcType=VARCHAR},
+      pamm = #{pamm,jdbcType=VARCHAR},
+      regf = #{regf,jdbcType=VARCHAR},
+      ship = #{ship,jdbcType=VARCHAR},
+      f19_sofe = #{f19Sofe,jdbcType=VARCHAR},
+      stam = #{stam,jdbcType=VARCHAR},
+      stex = #{stex,jdbcType=VARCHAR},
+      vata = #{vata,jdbcType=VARCHAR},
+      f19_fisc = #{f19Fisc,jdbcType=VARCHAR},
+      mfdv = #{mfdv,jdbcType=VARCHAR},
+      f19_txrc = #{f19Txrc,jdbcType=VARCHAR},
+      eutr = #{eutr,jdbcType=VARCHAR},
+      acru = #{acru,jdbcType=VARCHAR},
+      f19_equl = #{f19Equl,jdbcType=VARCHAR},
+      ftca = #{ftca,jdbcType=VARCHAR},
+      nrat = #{nrat,jdbcType=VARCHAR},
+      bwit = #{bwit,jdbcType=VARCHAR},
+      f19_txin = #{f19Txin,jdbcType=VARCHAR},
+      trax = #{trax,jdbcType=VARCHAR},
+      payd = #{payd,jdbcType=VARCHAR},
+      valu = #{valu,jdbcType=VARCHAR},
+      earl = #{earl,jdbcType=VARCHAR},
+      fxdt = #{fxdt,jdbcType=VARCHAR},
+      f92_atax = #{f92Atax,jdbcType=VARCHAR},
+      f92_char = #{f92Char,jdbcType=VARCHAR},
+      f92_equl = #{f92Equl,jdbcType=VARCHAR},
+      esof = #{esof,jdbcType=VARCHAR},
+      f92_flfr = #{f92Flfr,jdbcType=VARCHAR},
+      f92_fisc = #{f92Fisc,jdbcType=VARCHAR},
+      f92_grss = #{f92Grss,jdbcType=VARCHAR},
+      exch = #{exch,jdbcType=VARCHAR},
+      ince = #{ince,jdbcType=VARCHAR},
+      intp = #{intp,jdbcType=VARCHAR},
+      f92_nett = #{f92Nett,jdbcType=VARCHAR},
+      nres = #{nres,jdbcType=VARCHAR},
+      rate = #{rate,jdbcType=VARCHAR},
+      f92_sofe = #{f92Sofe,jdbcType=VARCHAR},
+      f92_taxc = #{f92Taxc,jdbcType=VARCHAR},
+      f92_taxr = #{f92Taxr,jdbcType=VARCHAR},
+      f92_txin = #{f92Txin,jdbcType=VARCHAR},
+      txpr = #{txpr,jdbcType=VARCHAR},
+      f92_txrc = #{f92Txrc,jdbcType=VARCHAR},
+      f92_witl = #{f92Witl,jdbcType=VARCHAR},
+      offr = #{offr,jdbcType=VARCHAR},
+      prpp = #{prpp,jdbcType=VARCHAR}
+    where e2_caoptn_id = #{e2CaoptnId,jdbcType=VARCHAR}
+  </update>
+</mapper>
